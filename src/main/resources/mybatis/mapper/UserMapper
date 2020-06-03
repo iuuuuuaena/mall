@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tapd.mapper.UserMapper">
+    <!--@Select("select * from user_info_table where user_id = #{id}")-->
+    <select id="findById" resultType="com.tapd.entities.User">
+        SELECT * FROM user_info_table WHERE user_id = #{id}
+    </select>
+
+    <!-- @Delete("delete from user_info_table where user_id = #{id}")-->
+    <delete id="deleteByAccount" >
+        DELETE FROM user_info_table WHERE user_account = #{user_account}
+    </delete>
+
+
+    <!--@Insert("insert into user_info_table values(user_id,user_nickname,user_account,user_password,user_age,user_gender,user_hobby,user_icon,user_qq,user_card,all_deal_amount)")-->
+
+    <insert id="insert" >
+        INSERT INTO user_info_table VALUES(user_id,user_nickname,user_account,user_password,user_age,user_gender,user_hobby,user_icon,user_qq,user_card,all_deal_amount)
+    </insert>
+
+    <!--@Update("updata user_info_table set #{key} = #{value} where user_id = #{id}")-->
+    <update id="update" >
+        UPDATE user_info_table
+        SET user_id = #{user_id},
+            user_nickname = #{user_nickname},
+            user_account = #{user_account},
+            user_password = #{user_password},
+            user_age = #{user_age},
+            user_gender = #{user_gender},
+            user_hobby = #{user_hobby},
+            user_icon = #{user_icon},
+            user_qq = #{user_qq},
+            user_card = #{user_card},
+            all_deal_amount = #{all_deal_amount}
+        WHERE user_account = #{user_account}
+    </update>
+
+</mapper>

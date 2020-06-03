@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tapd.mapper.DepartmentMapper">
+
+<!--@Select("select * from department where id = #{id}")-->
+<select id="findById" resultType="com.tapd.entities.Department">
+        SELECT * FROM department WHERE id = #{id};
+    </select>
+
+
+<!--&lt;!&ndash;@Insert("insert into department (departmentName) values (departmentName)")&ndash;&gt;-->
+<!--<insert id="insert">-->
+<!--    insert into department (departmentName) values (departmentName);-->
+<!--</insert>-->
+
+</mapper>

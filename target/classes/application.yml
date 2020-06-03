@@ -1,0 +1,15 @@
+# jdbc连接mysql
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://47.97.184.36:3306/mail
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#
+#
+## 配置mybatis的全局映射文件
+#mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml # 指定全局配置文件的位置
+#  mapper-locations: classpath:mybatis/mapper/*.xml # 指定sql映射文件的位置，*是包括所有的
+#  type-aliases-package: com.tapd.entities # MyBatis注解形式扫描实体类路径
