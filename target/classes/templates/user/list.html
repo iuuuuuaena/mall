@@ -98,7 +98,7 @@
 									<td th:text="${user.user_email}"></td>
 									<td>
 										<!--修改员工信息和删除按钮-->
-										<a class="btn btn-sm btn-primary" th:href="@{/user/}+${user.getUser_id()}" >修改</a>
+										<a class="btn btn-sm btn-primary" th:href="@{/user/}+${user.getUser_account()}" >修改</a>
 										<button th:attr="del_url=@{/user/}+${user.user_account}" class="btn btn-sm btn-danger deleteBtn" >删除</button>
 									</td>
 

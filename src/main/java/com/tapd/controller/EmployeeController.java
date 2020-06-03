@@ -95,7 +95,7 @@ public class EmployeeController {
 
 
     /**
-     * 修改管理员信息
+     * 修改员工信息
      * @param employee
      * @return
      */
@@ -110,7 +110,7 @@ public class EmployeeController {
 
 
     /**
-     * 根据员工id删除员工
+     * 根据员工account删除员工
      * @param account
      * @return
      */

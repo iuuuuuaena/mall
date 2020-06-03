@@ -61,12 +61,12 @@ public interface EmployeeMapper {
      * @param employee
      * @return
      */
-    @Update(" UPDATE manager_info_table\n" +
-            "        SET manager_nickname = #{manager_nickname},\n" +
-            "            manager_account = #{manager_account},\n" +
-            "            manager_password = #{manager_password},\n" +
-            "            manager_icon = #{manager_icon},\n" +
-            "            all_deal_amount = #{all_deal_amount}\n" +
+    @Update(" UPDATE manager_info_table" +
+            "        SET manager_nickname = #{manager_nickname}," +
+            "            manager_account = #{manager_account}," +
+            "            manager_password = #{manager_password}," +
+            "            manager_icon = #{manager_icon}," +
+            "            all_deal_amount = #{all_deal_amount}" +
             "        WHERE manager_account = #{manager_account}")
     public int update(Employee employee);
 

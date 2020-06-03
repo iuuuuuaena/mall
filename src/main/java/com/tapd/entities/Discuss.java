@@ -8,14 +8,24 @@ package com.tapd.entities;
 public class Discuss {
     private String user_account;
     private String user_nickname;
+    private Integer goods_id;
     private Integer discuss_id;
     private String discuss_content;
+
+    public Discuss(String user_account, String user_nickname, Integer goods_id, Integer discuss_id, String discuss_content) {
+        this.user_account = user_account;
+        this.user_nickname = user_nickname;
+        this.goods_id = goods_id;
+        this.discuss_id = discuss_id;
+        this.discuss_content = discuss_content;
+    }
 
     @Override
     public String toString() {
         return "Discuss{" +
                 "user_account='" + user_account + '\'' +
                 ", user_nickname='" + user_nickname + '\'' +
+                ", goods_id=" + goods_id +
                 ", discuss_id=" + discuss_id +
                 ", discuss_content='" + discuss_content + '\'' +
                 '}';
@@ -37,6 +47,14 @@ public class Discuss {
         this.user_nickname = user_nickname;
     }
 
+    public Integer getGoods_id() {
+        return goods_id;
+    }
+
+    public void setGoods_id(Integer goods_id) {
+        this.goods_id = goods_id;
+    }
+
     public Integer getDiscuss_id() {
         return discuss_id;
     }
@@ -50,13 +68,6 @@ public class Discuss {
     }
 
     public void setDiscuss_content(String discuss_content) {
-        this.discuss_content = discuss_content;
-    }
-
-    public Discuss(String user_account, String user_nickname, Integer discuss_id, String discuss_content) {
-        this.user_account = user_account;
-        this.user_nickname = user_nickname;
-        this.discuss_id = discuss_id;
         this.discuss_content = discuss_content;
     }
 }

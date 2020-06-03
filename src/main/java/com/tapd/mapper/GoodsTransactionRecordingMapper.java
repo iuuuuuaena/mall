@@ -50,11 +50,11 @@ public interface GoodsTransactionRecordingMapper {
      * @param goods
      * @return
      */
-    @Update(" UPDATE goods_transaction_recording_table\n" +
-            "        SET goods_id = #{goods_id},\n" +
-            "            goods_name = #{goods_name},\n" +
-            "            goods_account = #{goods_account},\n" +
-            "            is_deal = #{is_deal}\n" +
+    @Update(" UPDATE goods_transaction_recording_table" +
+            "        SET goods_id = #{goods_id}," +
+            "            goods_name = #{goods_name}," +
+            "            goods_account = #{goods_account}," +
+            "            is_deal = #{is_deal}" +
             "        WHERE goods_id = #{goods_id}")
     public int update(GoodsTransactionRecording goods);
 

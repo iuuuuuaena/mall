@@ -58,16 +58,16 @@
 					<!--这个页面我们不止当成添加员工 的页面，还可以修改，说以我们在这里有传入了一个manager，可以获取点进来的员工的各种信息-->
 					<h2><a class="btn btn-sm btn-success" href="/manager" th:href="@{/manager}">添加员工</a></h2>
 					<div class="table-responsive">
-						<form  th:action="@{/manager}" method="post" id="form" enctype="multipart/form-data">
+						<form  th:action="@{/manager}" method="post" id="form" >
 
 							<!--我们要发送put请求修改员工信息，springMVC帮我们配置好l-->
 							<!--我们只需要使用一个inpu框，然后类型是hidden-->
 
 							<input type="hidden" name="_method" value="put" th:if="${manager!=null}">
-							<input type="hidden" name="manager_id"  th:if="${manager!=null}" th:value="${manager.manager_id}">
+							<input type="hidden" name="manager_id"  th:if="${manager!=null}" th:value="${manager.getManager_id()}">
 							<div class="form-group">
 								<label>nickname</label>
-								<input  name = "manager_nickname"type="text" th:value="${manager!=null}?${manager.manager_nickname}" class="form-control" placeholder="zhangsan" >
+								<input  name = "manager_nickname" type="text" th:value="${manager!=null}?${manager.manager_nickname}" class="form-control" placeholder="zhangsan" >
 							</div>
 							<div class="form-group">
 								<label>account</label>
@@ -79,9 +79,9 @@
 							</div>
 							<div class="form-group">
 								<!--上传图片-->
-								<label>icon</label>z
+								<label>icon</label>
 								<input type="hidden" id="imageUrl" name="manager_icon" value="" th:if="${manager!=null}" /><br>
-								<img id="imgSrc"  th:class="${manager.manager_icon eq null or manager.manager_icon eq ''}?hidden:''" th:src="${manager.manager_icon}" style="width:100px;"/>
+								<!--<img id="imgSrc"  th:class="${manager.manager_icon eq null or manager.manager_icon eq ''}?hidden:''" th:src="${manager.manager_icon}" style="width:100px;"/>-->
 								<input name="file" onchange="fileUpload()" type="file" class="form-control" th:value="${manager!=null}?${manager.manager_icon}" >
 							</div>
 							<div class="form-group">

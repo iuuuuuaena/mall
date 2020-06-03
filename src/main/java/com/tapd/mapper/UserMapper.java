@@ -67,19 +67,18 @@ public interface UserMapper {
      * @param user
      * @return
      */
-    @Update(" UPDATE user_info_table\n" +
-            "        SET user_id = #{user_id},\n" +
-            "            user_nickname = #{user_nickname},\n" +
-            "            user_account = #{user_account},\n" +
-            "            user_password = #{user_password},\n" +
-            "            user_age = #{user_age},\n" +
-            "            user_gender = #{user_gender},\n" +
-            "            user_hobby = #{user_hobby},\n" +
-            "            user_icon = #{user_icon},\n" +
-            "            user_qq = #{user_qq},\n" +
-            "            user_card = #{user_card},\n" +
-            "            all_deal_amount = #{all_deal_amount}\n" +
-            "            user_email = #{user_email}\n"+
+    @Update(" UPDATE user_info_table " +
+            "        SET user_id = #{user_id}," +
+            "            user_nickname = #{user_nickname}," +
+            "            user_password = #{user_password}," +
+            "            user_age = #{user_age}," +
+            "            user_gender = #{user_gender}," +
+            "            user_hobby = #{user_hobby}," +
+            "            user_icon = #{user_icon}," +
+            "            user_qq = #{user_qq}," +
+            "            user_card = #{user_card}," +
+            "            all_deal_amount = #{all_deal_amount}," +
+            "            user_email = #{user_email}"+
             "        WHERE user_account = #{user_account}")
     public int update(User user);
 

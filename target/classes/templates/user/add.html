@@ -64,7 +64,7 @@
 							<!--我们只需要使用一个inpu框，然后类型是hidden-->
 
 							<input type="hidden" name="_method" value="put" th:if="${user!=null}">
-							<input type="hidden" name="id"  th:if="${user!=null}" th:value="${user.user_id}">
+							<input type="hidden" name="user_id"  th:if="${user!=null}" th:value="${user.user_id}">
 							<div class="form-group">
 								<label>昵称</label>
 								<input form="form1"   name = "user_nickname"type="text" th:value="${user!=null}?${user.user_nickname}" class="form-control" placeholder="张三" >
@@ -193,9 +193,6 @@
 
 	<!--图片提交-->
 	<script>
-		$("#")
-
-
 	</script>
 
 	</body>

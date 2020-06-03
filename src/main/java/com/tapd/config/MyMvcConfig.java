@@ -97,7 +97,6 @@ public class MyMvcConfig implements WebMvcConfigurer {
 
 
     @Value("${user.file.path}")
-
     private String filePath;
 
     // 配置文件上传路径

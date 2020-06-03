@@ -1,7 +1,9 @@
 package com.tapd.serviceimpl;
 
-import com.tapd.entities.UPublishGoods;
+import com.tapd.entities.Goods;
+import com.tapd.mapper.UPublishGoodsMapper;
 import com.tapd.service.UPublishGoodsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,33 +16,42 @@ import java.util.List;
 @Service
 public class UPublishGoodsServiceImpl implements UPublishGoodsService {
 
-    @Override
-    public List<UPublishGoods> findAll() {
-        return null;
+
+    @Autowired
+    UPublishGoodsMapper uPublishGoodsMapper;
+
+
+
+    public List<Goods> findAll() {
+        return uPublishGoodsMapper.showAllGoods();
     }
 
-    @Override
-    public UPublishGoods findById(Integer id) {
-        return null;
+    public Goods findById(Integer id) {
+        return uPublishGoodsMapper.findById(id);
     }
 
-    @Override
-    public UPublishGoods findByAccount(String account) {
-        return null;
+
+    public List<Goods> findByAccount(String account) {
+        return uPublishGoodsMapper.findByAccount(account);
     }
 
-    @Override
-    public int create(UPublishGoods uPublishGoods) {
-        return 0;
+
+    public List<Goods> findLikeGoods(String name) {
+        return uPublishGoodsMapper.findLikeGoods(name);
     }
 
-    @Override
-    public int delete(String account) {
-        return 0;
+
+
+    public int create(Goods goods) {
+        return uPublishGoodsMapper.insert(goods);
     }
 
-    @Override
-    public int update(UPublishGoods uPublishGoods) {
-        return 0;
+
+    public int deleteById(Integer id) {
+        return uPublishGoodsMapper.deleteById(id);
+    }
+
+    public int update(Goods goods) {
+        return uPublishGoodsMapper.update(goods);
     }
 }

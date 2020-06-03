@@ -1,6 +1,6 @@
 package com.tapd.mapper;
 
-import com.tapd.entities.UPublishGoods;
+import com.tapd.entities.Goods;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -10,50 +10,68 @@ import java.util.List;
 @Mapper
 public interface UPublishGoodsMapper {
 
+    @Select("select * from  user_publish_goods_table")
+    public List<Goods> showAllGoods();
 
     /**
-     * 通过Goods_id查找
+     * 通过用户账号查询所有的他发布的商品
+     * @param account
+     * @return
+     */
+    @Select("select * from user_publish_goods_table where user_account = #{account}")
+    public List<Goods> findByAccount(String account);
+
+
+    /**
+     * 通过商品名字模糊查询
+     * @param goods_like_name
+     * @return
+     */
+    @Select("select * from user_publish_goods_table where goods_name like %#{account}%")
+    public List<Goods> findLikeGoods(String goods_like_name);
+
+
+    /**
+     * 通过商品id查询
      * @param id
      * @return
      */
-    @Select("select * from user_publish_goods_table where goods_id = #{id}")
-    public UPublishGoods findById(String id);
+    @Select("select * from user_publish_goods_table where goods_id  = #{id}")
+    public Goods findById(Integer id);
+
+
+    // 回的是插入的条数，也就是插入的商品数量，一般就是一个，批量插入就是多个了
+    @Insert("insert into user_publish_goods_table (user_nickname,user_account,goods_id,goods_name,goods_account,goods_image,goods_info,goods_tag,is_deal)" +
+            "values " +
+            "(#{user_nickname},#{user_account},#{goods_id},#{goods_name},#{goods_account},#{goods_image},#{goods_info},#{goods_tag},#{is_deal})")
+    public  int insert(Goods goods);
+
 
     /**
-     *  通过账号删除用户
+     *  通过id删除商品
      * @param id
      * @return
      */
     @Delete("DELETE FROM user_publish_goods_table WHERE goods_id = #{id}")
-    public int  deleteById(String id);
+    public int  deleteById(Integer id);
 
-    /**
-     * 插入发布商品
-     * @param goods
-     * @return  返回的是插入的条数，也就是插入的商品数量，一般就是一个，批量插入就是多个了
-     */
-    @Insert("insert into user_publish_goods_table (user_id,user_nickname,user_account,goods_id,goods_name,goods_account,goods_image,goods_info,goods_tag,is_deal)" +
-            "values " +
-            "(#{user_id},#{user_nickname},#{user_account},#{goods_id},#{goods_name},#{goods_account},#{goods_image},#{goods_info},#{goods_tag},#{is_deal})")
-    public int insert(UPublishGoods goods);
 
     /**
      * 传入要修改的goods
      * @param goods
      * @return
      */
-    @Update(" UPDATE user_publish_goods_table\n" +
-            "        SET user_id = #{user_id},\n" +
-            "            user_nickname = #{user_nickname},\n" +
-            "            user_account = #{user_account},\n" +
-            "            goods_id = #{goods_id},\n" +
-            "            goods_name = #{goods_name},\n" +
-            "            goods_account = #{goods_account},\n" +
-            "            goods_image = #{goods_image},\n" +
-            "            goods_info = #{goods_info},\n" +
-            "            goods_tag = #{goods_tag},\n" +
-            "            is_deal = #{is_deal}\n" +
+    @Update(" UPDATE user_publish_goods_table" +
+            "        SET user_nickname = #{user_nickname}," +
+            "            user_account = #{user_account}," +
+            "            goods_id = #{goods_id}," +
+            "            goods_name = #{goods_name}," +
+            "            goods_account = #{goods_account}," +
+            "            goods_image = #{goods_image}," +
+            "            goods_info = #{goods_info}," +
+            "            goods_tag = #{goods_tag}," +
+            "            is_deal = #{is_deal}" +
             "        WHERE goods_id = #{goods_id}")
-    public int update(UPublishGoods goods);
+    public int update(Goods goods);
 
 }

@@ -39,7 +39,7 @@ public class UserController {
     // }
 
     /**
-     * 显示所有的用户
+     * 跳转到用户列表界面，并显示所有的用户
      * @return
      */
     @GetMapping(value = "/users")
@@ -52,7 +52,7 @@ public class UserController {
         return "user/list";
     }
 
-    // 到员工的部门到页面，
+    // 跳转到用户添加页面
     @GetMapping(value = "/user")
     public String toAddPage(){
         // // 查出员工信息
@@ -79,7 +79,7 @@ public class UserController {
 
     // 携带id去修改员工信息的页面
     @GetMapping(value = "/user/{account}")
-    public String toEditPage(@PathVariable("id")String account, Model model){
+    public String toEditPage(@PathVariable("account")String account, Model model){
 
         // 查到id的员工
         User user = userServiceImpl.findByAccount(account);

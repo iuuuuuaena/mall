@@ -26,8 +26,8 @@ public class User {
     private Integer user_gender;
     private String user_hobby;
     private String user_icon;
-    private String user_qq;
-    private String user_card;
+    private Integer user_qq;
+    private Integer user_card;
     private Integer all_deal_amount;
     private String user_email;
 
@@ -106,26 +106,26 @@ public class User {
                 ", user_gender=" + user_gender +
                 ", user_hobby='" + user_hobby + '\'' +
                 ", user_icon='" + user_icon + '\'' +
-                ", user_qq='" + user_qq + '\'' +
-                ", user_card='" + user_card + '\'' +
+                ", user_qq=" + user_qq +
+                ", user_card=" + user_card +
                 ", all_deal_amount=" + all_deal_amount +
                 ", user_email='" + user_email + '\'' +
                 '}';
     }
 
-    public String getUser_qq() {
+    public Integer getUser_qq() {
         return user_qq;
     }
 
-    public void setUser_qq(String user_qq) {
+    public void setUser_qq(Integer user_qq) {
         this.user_qq = user_qq;
     }
 
-    public String getUser_card() {
+    public Integer getUser_card() {
         return user_card;
     }
 
-    public void setUser_card(String user_card) {
+    public void setUser_card(Integer user_card) {
         this.user_card = user_card;
     }
 
@@ -145,7 +145,7 @@ public class User {
         this.user_email = user_email;
     }
 
-    public User(Integer user_id, String user_nickname, String user_account, String user_password, Integer user_age, Integer user_gender, String user_hobby, String user_icon, String user_qq, String user_card, Integer all_deal_amount, String user_email) {
+    public User(Integer user_id, String user_nickname, String user_account, String user_password, Integer user_age, Integer user_gender, String user_hobby, String user_icon, Integer user_qq, Integer user_card, Integer all_deal_amount, String user_email) {
         this.user_id = user_id;
         this.user_nickname = user_nickname;
         this.user_account = user_account;
