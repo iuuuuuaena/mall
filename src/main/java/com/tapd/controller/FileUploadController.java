@@ -1,11 +1,17 @@
 package com.tapd.controller;
 
+import com.tapd.entities.UserLoginStatus;
+import com.tapd.service.FileService;
+import com.tapd.utils.PathUtil;
+import com.tapd.utils.ResultUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.util.ClassUtils;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,92 +31,131 @@ import javax.annotation.Resource;
  * @Version 1.0
  */
 
-@Controller
-public class FileUploadController {
+@RestController
+public class FileUploadController  extends BaseController {
 
 
-    @Value("${user.file.path}")
-    private String filePath;
 
-    @Resource
-    private ResourceLoader resourceLoader;
+    // 日志记录器
+    Logger logger = LoggerFactory.getLogger(getClass());
 
-    @RequestMapping("/upload")
-    public ModelAndView update(@RequestParam("icon") MultipartFile multipartFile) {
-        String fileName ="";
-        ModelAndView modelAndView = new ModelAndView();
+    // //
+    // //
+    // //
+    // // @Value("${user.file.path}")
+    // // private String filePath;
+    // //
+    // // @Resource
+    // // private ResourceLoader resourceLoader;
+    // //
+    // // @RequestMapping("/fileUpload")
+    // // public ModelAndView update(@RequestParam("icon") MultipartFile multipartFile) {
+    // //     String fileName ="";
+    // //     ModelAndView modelAndView = new ModelAndView();
+    // //
+    // //
+    // //     try {
+    // //         // 保存图片
+    // //         fileName = multipartFile.getOriginalFilename();
+    // //         if (fileName.isEmpty()){
+    // //             modelAndView.setViewName("user/add");
+    // //             modelAndView.getModel().put("filePath","没有这个文件");
+    // //             return modelAndView;
+    // //         }
+    // //         File file = new File(filePath+fileName);
+    // //         System.out.println("路径是"+filePath);
+    // //         System.out.println("文件名为："+multipartFile.getOriginalFilename());
+    // //         multipartFile.transferTo(file);
+    // //     } catch (IOException e) {
+    // //         e.printStackTrace();
+    // //     }
+    // //
+    // //
+    // //     modelAndView.setViewName("user/add");
+    // //     modelAndView.getModel().put("filePath","/"+fileName);
+    // //     return modelAndView;
+    // // }
+    // //
+    // //
+    // //
+    // // //控制器方式实现其实就是为图片格式指定一个请求，每次加载都请求类，
+    // // // /{filename:.+}是指定路径变量配货图片如xx.png格式这个请求，
+    // // // resourceLoader.getResource("file:" + Paths.get(filePath + filename)));
+    // // // 中的 "file:"开头的代表使用file此种类型去加载这个资源，因为HTML是不能直接访问本地资源的
+    // // // 需要将本地资源放到file类型告诉HTML这个可以访问
+    // //
+    // // @RequestMapping(value = "/file/{filename:.+}")
+    // // @ResponseBody
+    // // public ResponseEntity<?> getFile(@PathVariable String filename) {
+    // //     try {
+    // //         return  ResponseEntity.ok(resourceLoader.getResource("file:" + Paths.get(filePath + filename)));
+    // //     } catch (Exception e) {
+    // //         return ResponseEntity.notFound().build();
+    // //     }
+    // // }
+    //
+    //
+    // /**
+    //  * 员工上传图片
+    //  * @param file
+    //  * @return
+    //  * @throws Exception
+    //  */
+    // @RequestMapping(value = "/mFileUpload",method = RequestMethod.POST)
+    // @ResponseBody
+    // public Object uploadPic(MultipartFile file) throws Exception {
+    //     String oldName = file.getOriginalFilename();
+    //     String newName = UUID.randomUUID().toString().replace("-", "").toUpperCase()
+    //             + "_" + oldName;
+    //     System.out.println("上传的图片的newName: " + newName);
+    //
+    //     File base = new File(filePath);
+    //     if (! base.exists()) {
+    //         base.mkdirs();
+    //     }
+    //
+    //     // 保存文件
+    //     file.transferTo(new File(filePath + newName));
+    //
+    //     // 封装返回结果
+    //     Map<String, Object> map = new HashMap<>();
+    //     map.put("fullPath", newName); //"http://localhost:8080/assert/image/" +
+    //     map.put("relativePath", newName);
+    //
+    //     return map;
+    // }
 
-        try {
-            // 保存图片
-            fileName = multipartFile.getOriginalFilename();
-            if (fileName.isEmpty()){
-                modelAndView.setViewName("user/add");
-                modelAndView.getModel().put("filePath","没有这个文件");
-                return modelAndView;
-            }
-            File file = new File(filePath+fileName);
-            System.out.println("路径是"+filePath);
-            System.out.println("文件名为："+multipartFile.getOriginalFilename());
-            multipartFile.transferTo(file);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @Value("${file.img.path}")
+    private String IMG_PATH;
+    FileService fileService;
 
 
-        modelAndView.setViewName("user/add");
-        modelAndView.getModel().put("filePath","/"+fileName);
-        return modelAndView;
+    @Autowired
+    public void setFileService(FileService fileService) {
+        this.fileService = fileService;
     }
 
+    @PostMapping("/upload")
+    public Object upload(@RequestParam("file") MultipartFile img, HttpServletRequest request){
 
 
-    //控制器方式实现其实就是为图片格式指定一个请求，每次加载都请求类，
-    // /{filename:.+}是指定路径变量配货图片如xx.png格式这个请求，
-    // resourceLoader.getResource("file:" + Paths.get(filePath + filename)));
-    // 中的 "file:"开头的代表使用file此种类型去加载这个资源，因为HTML是不能直接访问本地资源的
-    // 需要将本地资源放到file类型告诉HTML这个可以访问
-
-    @RequestMapping(value = "/file/{filename:.+}")
-    @ResponseBody
-    public ResponseEntity<?> getFile(@PathVariable String filename) {
-        try {
-            return  ResponseEntity.ok(resourceLoader.getResource("file:" + Paths.get(filePath + filename)));
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
+        // 从请求中获取用户登录状态
+        UserLoginStatus userLoginStatus = getUserLoginStatus(request);
+        if (userLoginStatus == null) {
+            // 如果用户没有登录状态的话，就返回用户没有登录的json信息
+            return ResultUtils.fail(com.tapd.enums.ResponseStatus.NO_LOGIN);
         }
-    }
-
-
-    /**
-     * 员工上传图片
-     * @param file
-     * @return
-     * @throws Exception
-     */
-    @RequestMapping(value = "/mFileUpload",method = RequestMethod.POST)
-    @ResponseBody
-    public Object uploadPic(MultipartFile file) throws Exception {
-        String oldName = file.getOriginalFilename();
-        String newName = UUID.randomUUID().toString().replace("-", "").toUpperCase()
-                + "_" + oldName;
-        System.out.println("上传的图片的newName: " + newName);
-
-        File base = new File(filePath);
-        if (! base.exists()) {
-            base.mkdirs();
+        // 如果用户登录，就保存图片
+        String res=fileService.saveUploadFile(img, PathUtil.getRootPath()+IMG_PATH);
+        if (res==null){
+            // 如果保存图片失败，就返回图片上传失败
+            return ResultUtils.fail(com.tapd.enums.ResponseStatus.IMG_UPLOAD_FAIL);
         }
-
-        // 保存文件
-        file.transferTo(new File(filePath + newName));
-
-        // 封装返回结果
-        Map<String, Object> map = new HashMap<>();
-        map.put("fullPath", newName); //"http://localhost:8080/assert/image/" +
-        map.put("relativePath", newName);
-
-        return map;
+        // 否则 返回储存的路径
+        Map<String ,String > map=new HashMap<>(1);
+        map.put("path","/img/"+res);
+        return ResultUtils.ok(map);
     }
-
 
 
 

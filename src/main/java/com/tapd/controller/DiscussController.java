@@ -5,6 +5,7 @@ import com.tapd.serviceimpl.DiscussServiceImpl;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
@@ -25,18 +26,20 @@ public class DiscussController {
 
     //跳转到评论界面，并显示所有评论
     // 显示所有评论
-    @GetMapping("/discuss")
-    public String showAllDiscuss() {
-         discussService.findAll();
-        return "goods/list";
+    @GetMapping("/discusses")
+    public String showAllDiscuss(Model model) {
+        List<Discuss> allDiscuss = discussService.findAll();
+        model.addAttribute("discusses",allDiscuss);
+        System.out.println("所有评论："+allDiscuss.toString());
+        return "discuss/list";
     }
 
 
-    @PostMapping("/discuss/{goods_id}")
-    public String deleteDiscuss(@PathVariable("goods_id") Integer goods_id){
-
-        discussService.delete(goods_id);
-        return "goods/list";
+    @PostMapping(value = "/discuss/{discuss_id}")
+    public String deleteDiscuss(@PathVariable("discuss_id") Integer discuss_id){
+        int result = discussService.delete(discuss_id);
+        System.out.println("要删除的评论idWie"+discuss_id);
+        return "redirect:/discuss";
     }
 
 

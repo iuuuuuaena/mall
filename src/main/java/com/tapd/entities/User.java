@@ -27,9 +27,27 @@ public class User {
     private String user_hobby;
     private String user_icon;
     private Integer user_qq;
-    private Integer user_card;
+    private String user_card;
     private Integer all_deal_amount;
     private String user_email;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "user_id=" + user_id +
+                ", user_nickname='" + user_nickname + '\'' +
+                ", user_account='" + user_account + '\'' +
+                ", user_password='" + user_password + '\'' +
+                ", user_age=" + user_age +
+                ", user_gender=" + user_gender +
+                ", user_hobby='" + user_hobby + '\'' +
+                ", user_icon='" + user_icon + '\'' +
+                ", user_qq=" + user_qq +
+                ", user_card='" + user_card + '\'' +
+                ", all_deal_amount=" + all_deal_amount +
+                ", user_email='" + user_email + '\'' +
+                '}';
+    }
 
     public Integer getUser_id() {
         return user_id;
@@ -95,24 +113,6 @@ public class User {
         this.user_icon = user_icon;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "user_id=" + user_id +
-                ", user_nickname='" + user_nickname + '\'' +
-                ", user_account='" + user_account + '\'' +
-                ", user_password='" + user_password + '\'' +
-                ", user_age=" + user_age +
-                ", user_gender=" + user_gender +
-                ", user_hobby='" + user_hobby + '\'' +
-                ", user_icon='" + user_icon + '\'' +
-                ", user_qq=" + user_qq +
-                ", user_card=" + user_card +
-                ", all_deal_amount=" + all_deal_amount +
-                ", user_email='" + user_email + '\'' +
-                '}';
-    }
-
     public Integer getUser_qq() {
         return user_qq;
     }
@@ -121,11 +121,11 @@ public class User {
         this.user_qq = user_qq;
     }
 
-    public Integer getUser_card() {
+    public String getUser_card() {
         return user_card;
     }
 
-    public void setUser_card(Integer user_card) {
+    public void setUser_card(String user_card) {
         this.user_card = user_card;
     }
 
@@ -145,7 +145,7 @@ public class User {
         this.user_email = user_email;
     }
 
-    public User(Integer user_id, String user_nickname, String user_account, String user_password, Integer user_age, Integer user_gender, String user_hobby, String user_icon, Integer user_qq, Integer user_card, Integer all_deal_amount, String user_email) {
+    public User(Integer user_id, String user_nickname, String user_account, String user_password, Integer user_age, Integer user_gender, String user_hobby, String user_icon, Integer user_qq, String user_card, Integer all_deal_amount, String user_email) {
         this.user_id = user_id;
         this.user_nickname = user_nickname;
         this.user_account = user_account;

@@ -9,7 +9,21 @@ public class Employee {
     private String manager_account;
     private String manager_password;
     private String manager_icon;
+    private String manager_email;
     private Integer all_deal_amount;
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "manager_id=" + manager_id +
+                ", manager_nickname='" + manager_nickname + '\'' +
+                ", manager_account='" + manager_account + '\'' +
+                ", manager_password='" + manager_password + '\'' +
+                ", manager_icon='" + manager_icon + '\'' +
+                ", manager_email='" + manager_email + '\'' +
+                ", all_deal_amount=" + all_deal_amount +
+                '}';
+    }
 
     public Integer getManager_id() {
         return manager_id;
@@ -51,6 +65,14 @@ public class Employee {
         this.manager_icon = manager_icon;
     }
 
+    public String getManager_email() {
+        return manager_email;
+    }
+
+    public void setManager_email(String manager_email) {
+        this.manager_email = manager_email;
+    }
+
     public Integer getAll_deal_amount() {
         return all_deal_amount;
     }
@@ -59,24 +81,13 @@ public class Employee {
         this.all_deal_amount = all_deal_amount;
     }
 
-    @Override
-    public String toString() {
-        return "EmployeeMapper{" +
-                "manager_id=" + manager_id +
-                ", manager_nickname='" + manager_nickname + '\'' +
-                ", manager_account='" + manager_account + '\'' +
-                ", manager_password='" + manager_password + '\'' +
-                ", manager_icon='" + manager_icon + '\'' +
-                ", all_deal_amount=" + all_deal_amount +
-                '}';
-    }
-
-    public Employee(Integer manager_id, String manager_nickname, String manager_account, String manager_password, String manager_icon, Integer all_deal_amount) {
+    public Employee(Integer manager_id, String manager_nickname, String manager_account, String manager_password, String manager_icon, String manager_email, Integer all_deal_amount) {
         this.manager_id = manager_id;
         this.manager_nickname = manager_nickname;
         this.manager_account = manager_account;
         this.manager_password = manager_password;
         this.manager_icon = manager_icon;
+        this.manager_email = manager_email;
         this.all_deal_amount = all_deal_amount;
     }
 }

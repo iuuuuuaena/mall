@@ -32,17 +32,18 @@ public class GoodsController {
      */
     @RequestMapping(value = "/goods",method = RequestMethod.GET)
 
-    public String showGoodsList(){
-        uPublishGoodsService.findAll();
+    public String showGoodsList(Model model){
+        List<Goods> allGoods = uPublishGoodsService.findAll();
+        model.addAttribute("goods",allGoods);
         return "goods/list";
     }
 
     // 通过id删除商品
-    @RequestMapping(value = "/goods/{id}",method = RequestMethod.POST)
+    @DeleteMapping(value = "/goods/{id}")
     public String delete(@PathVariable("id")Integer id){
 
         uPublishGoodsService.deleteById(id);
-        return "goods/list";
+        return "redirect:/goods";
 
     }
 

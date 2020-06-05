@@ -51,9 +51,9 @@ public interface EmployeeMapper {
      * @param employee
      * @return  返回的是插入的条数，也就是插入的用户数量，一般就是一个，批量插入就是多个了
      */
-    @Insert("insert into manager_info_table (manager_nickname,manager_account,manager_password,manager_icon,all_deal_amount)" +
+    @Insert("insert into manager_info_table (manager_nickname,manager_account,manager_password,manager_icon,manager_email,all_deal_amount)" +
             "values " +
-            "(#{manager_nickname},#{manager_account},#{manager_password},#{manager_icon},#{all_deal_amount})")
+            "(#{manager_nickname},#{manager_account},#{manager_password},#{manager_icon},#{manager_email},#{all_deal_amount})")
     public int insert(Employee employee);
 
     /**
@@ -66,6 +66,7 @@ public interface EmployeeMapper {
             "            manager_account = #{manager_account}," +
             "            manager_password = #{manager_password}," +
             "            manager_icon = #{manager_icon}," +
+            "            manager_email = #{manager_email}," +
             "            all_deal_amount = #{all_deal_amount}" +
             "        WHERE manager_account = #{manager_account}")
     public int update(Employee employee);

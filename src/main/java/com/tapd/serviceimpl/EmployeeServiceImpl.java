@@ -32,7 +32,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee findByAccount(String account) {
-        return employeeMapper.findByAccount(account) ;
+        return employeeMapper.findByAccount(account);
     }
 
     @Override

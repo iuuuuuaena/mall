@@ -52,14 +52,23 @@ public interface UserMapper {
     @Delete("DELETE FROM user_info_table WHERE user_account = #{user_account}")
     public int  deleteByAccount(String user_account);
 
+
+    /**
+     *  通过id删除用户
+     * @param id
+     * @return
+     */
+    @Delete("DELETE FROM user_info_table WHERE user_account = #{id}")
+    public int deleteByID(Integer id);
+
     /**
      * 插入用户
      * @param user
      * @return  返回的是插入的条数，也就是插入的用户数量，一般就是一个，批量插入就是多个了
      */
-    @Insert("insert into user_info_table (user_nickname,user_account,user_password,user_age,user_gender,user_hobby,user_icon,user_qq,user_card,all_deal_amount,user_email)" +
+    @Insert("insert into user_info_table (user_account,user_password,user_email)" +
             "values " +
-            "(#{user_nickname},#{user_account},#{user_password},#{user_age},#{user_gender},#{user_hobby},#{user_icon},#{user_qq},#{user_card},#{all_deal_amount},#{user_email})")
+            "(#{user_account},#{user_password},#{user_email})")
     public int insert(User user);
 
     /**
@@ -68,8 +77,7 @@ public interface UserMapper {
      * @return
      */
     @Update(" UPDATE user_info_table " +
-            "        SET user_id = #{user_id}," +
-            "            user_nickname = #{user_nickname}," +
+            "        SET  user_nickname = #{user_nickname}," +
             "            user_password = #{user_password}," +
             "            user_age = #{user_age}," +
             "            user_gender = #{user_gender}," +
@@ -83,5 +91,12 @@ public interface UserMapper {
     public int update(User user);
 
 
+    /**
+     * 用email找user
+     * @param userEmail
+     * @return   List<User>
+     */
+    @Select("select * from user_info_table where user_email = #{userEmail} ")
+    public  List<User> findUserByEmail(String userEmail);
 
 }

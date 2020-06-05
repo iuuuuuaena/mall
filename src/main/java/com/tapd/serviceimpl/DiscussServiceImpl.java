@@ -4,6 +4,7 @@ import com.tapd.entities.Discuss;
 import com.tapd.mapper.DiscussMapper;
 import com.tapd.service.DiscussService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * @Date 2020-06-02  22:15
  * @Version 1.0
  */
+@Service
 public class DiscussServiceImpl   implements DiscussService {
 
 

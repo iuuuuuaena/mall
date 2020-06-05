@@ -21,22 +21,11 @@ import java.util.List;
 @Controller
 public class UserController {
 
+
+    // -------------------------------后台------------------------------
     @Autowired
     UserServiceImpl userServiceImpl;
 
-    // /**
-    //  *  通过id查询用户
-    //  * @param id
-    //  * @return
-    //  */
-    // @ResponseBody
-    // @RequestMapping(value = "/searchuser",method = RequestMethod.GET)
-    // public User findById(@RequestParam("id") Integer id){
-    //
-    //     System.out.println("id为"+id);
-    //     // System.out.println(userMapper.findByUserId(id));
-    //     return userServiceImpl.findById(id);
-    // }
 
     /**
      * 跳转到用户列表界面，并显示所有的用户
@@ -99,7 +88,7 @@ public class UserController {
 
 
     // 修改管理员信息
-    @PutMapping(value = "/user")
+    @RequestMapping(value = "/user",method = RequestMethod.PUT)
     public String updataUser(User user){
         // 这里把传来的包括id和其他信息自动封装到employee里面，我们来查看是否修改完成
         System.out.println(user);
@@ -109,12 +98,21 @@ public class UserController {
     }
 
 
-    @PostMapping(value = "/user/{account}")
+    @RequestMapping(value = "/user/{account}",method = RequestMethod.DELETE)
     public String deleteUser(@PathVariable("account")String account){
-        System.out.println("要删除的员工id为:"+account);
+        System.out.println("要删除的员工account为:"+account);
         userServiceImpl.delete(account);
         return "redirect:/users";
     }
+
+
+
+
+//    ---------------------------------前台-----------------------------------------
+
+
+
+
 
 
 

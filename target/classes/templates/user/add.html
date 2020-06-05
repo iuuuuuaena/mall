@@ -67,30 +67,30 @@
 							<input type="hidden" name="user_id"  th:if="${user!=null}" th:value="${user.user_id}">
 							<div class="form-group">
 								<label>昵称</label>
-								<input form="form1"   name = "user_nickname"type="text" th:value="${user!=null}?${user.user_nickname}" class="form-control" placeholder="张三" >
+								<input   name = "user_nickname"type="text" th:value="${user!=null}?${user.user_nickname}" class="form-control" placeholder="张三" >
 							</div>
 							<div class="form-group">
 								<label>账号</label>
-								<input form="form1"  name ="user_account" type="text" class="form-control" th:value="${user!=null}?${user.user_account}" placeholder="abcdefg">
+								<input  name ="user_account" type="text" class="form-control" th:value="${user!=null}?${user.user_account}" placeholder="abcdefg">
 							</div>
 
 							<div class="form-group">
 								<label>密码</label>
-								<input form="form1"  name ="user_password" type="password" class="form-control" th:value="${user!=null}?${user.user_password}" placeholder="**********">
+								<input   name ="user_password" type="password" class="form-control" th:value="${user!=null}?${user.user_password}" placeholder="**********">
 							</div>
 							<div class="form-group">
 								<label>年龄</label>
-								<input form="form1"  name ="user_age" type="text" class="form-control" th:value="${user!=null}?${user.user_age}" placeholder="22">
+								<input   name ="user_age" type="text" class="form-control" th:value="${user!=null}?${user.user_age}" placeholder="22">
 							</div>
 
 							<div class="form-group">
 								<label>性别</label><br/>
 								<div class="form-check form-check-inline">
-									<input  form="form1"  type="radio" name = "user_gender" class="form-check-input" th:checked="${user!=null}?${user.user_gender==1}"   value="1">
+									<input type="radio" name = "user_gender" class="form-check-input" th:checked="${user!=null}?${user.user_gender==1}"   value="1">
 									<label class="form-check-label">男</label>
 								</div>
 								<div class="form-check form-check-inline">
-									<input  form="form1"  type="radio" name = "user_gender" class="form-check-input" th:checked="${user!=null}?${user.user_gender==0}"   value="0">
+									<input   type="radio" name = "user_gender" class="form-check-input" th:checked="${user!=null}?${user.user_gender==0}"   value="0">
 									<label  class="form-check-label">女</label>
 								</div>
 							</div>
@@ -103,22 +103,22 @@
 
 								<label>图片上传</label> <img th:if="${filePath!=null}" th:src="'/file/'+${filePath}" >
 								<!--这个是上传图片的，-->
-								<input name ="icon" form="form2" type="file" class="form-control" th:value="${file!=null}?${file}">
-								<input class="btn btn-sm btn-success"  form="form2"  type="submit" >
+								<!--<input name ="icon" form="form2" type="file" class="form-control" th:value="${file!=null}?${file}">-->
+								<!--<input class="btn btn-sm btn-success"  form="form2"  type="submit" >-->
 								<!--这个是隐藏的-->
-								<input name ="user_icon"  form="form1"   value="" type="hidden" class="form-control" th:value="${user!=null}?${user.user_icon}" placeholder="null">
+								<input name ="user_icon"    value="" type="hidden" class="form-control" th:value="${user!=null}?${user.user_icon}" placeholder="null">
 							</div>
 							<div class="form-group">
 								<label>QQ</label>
-								<input  form="form1" name ="user_qq" type="text" class="form-control" th:value="${user!=null}?${user.user_qq}" placeholder="2291146413">
+								<input   name ="user_qq" type="text" class="form-control" th:value="${user!=null}?${user.user_qq}" placeholder="2291146413">
 							</div>
 							<div class="form-group">
 								<label>银行卡</label>
-								<input form="form1"  name ="user_card" type="text" class="form-control" th:value="${user!=null}?${user.user_card}" placeholder="xxxxxxxxxxxxx3456">
+								<input   name ="user_card" type="text" class="form-control" th:value="${user!=null}?${user.user_card}" placeholder="xxxxxxxxxxxxx3456">
 							</div>
 							<div class="form-group">
 								<label>Email</label>
-								<input  form="form1" name ="user_email" type="text" class="form-control" th:value="${user!=null}?${user.user_email}" placeholder="zhangsan@atguigu.com">
+								<input   name ="user_email" type="text" class="form-control" th:value="${user!=null}?${user.user_email}" placeholder="zhangsan@atguigu.com">
 							</div>
 
 
@@ -131,15 +131,15 @@
 							<!--</div>-->
 							<div class="form-group">
 								<label>交易总金额</label>
-								<input  form="form1" name ="all_deal_amount" type="text" class="form-control" th:value="${user!=null}?${user.all_deal_amount}" placeholder="0.0">
+								<input   name ="all_deal_amount" type="text" class="form-control" th:value="${user!=null}?${user.all_deal_amount}" placeholder="0.0">
 							</div>
 							<button type="submit" class="btn btn-primary"  th:text="${user!=null}?'修改':'添加'" >添加</button>
 						</form>
 
 
-						<form action="/upload"  id = "form2" method="post" enctype="multipart/form-data">
+						<!--<form action="/upload"  id = "form2" method="post" enctype="multipart/form-data">-->
 
-						</form>
+						<!--</form>-->
 					</div>
 				</main>
 			</div>

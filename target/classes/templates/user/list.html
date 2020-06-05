@@ -99,7 +99,7 @@
 									<td>
 										<!--修改员工信息和删除按钮-->
 										<a class="btn btn-sm btn-primary" th:href="@{/user/}+${user.getUser_account()}" >修改</a>
-										<button th:attr="del_url=@{/user/}+${user.user_account}" class="btn btn-sm btn-danger deleteBtn" >删除</button>
+										<button th:attr="del_url=@{/user/}+${user.getUser_account()}" class="btn btn-sm btn-danger deleteBtn" >删除</button>
 									</td>
 
 								</tr>
@@ -107,7 +107,7 @@
 
 						</table>
 					</div>
-					<form  id ="deleteUserFrom"  method="post">
+					<form  id ="deleteUsersFrom"  method="post">
 						<input  type="hidden" name="_method" value="delete"/>
 					</form>
 				</main>
@@ -128,7 +128,7 @@
 			//
 			$('.deleteBtn').click(function(){
 				// 提交from表单 -删除指定元素的
-				$("#deleteUserFrom").attr("action",$(this).attr("del_url")).submit();
+				$("#deleteUsersFrom").attr("action",$(this).attr("del_url")).submit();
 				return false;
 			})
 		</script>
