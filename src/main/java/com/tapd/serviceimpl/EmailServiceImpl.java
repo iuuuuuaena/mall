@@ -3,15 +3,17 @@ package com.tapd.serviceimpl;
 import com.tapd.service.EmailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-
+import org.springframework.stereotype.Service;
 /**
  * @Author jxd
  * @Date 2020-06-05  12:16
  * @Version 1.0
  */
+@Service
 public class EmailServiceImpl implements EmailService {
 
 
@@ -20,7 +22,8 @@ public class EmailServiceImpl implements EmailService {
     private String from;
 
     // 邮件发送 API
-    private JavaMailSender mailSender;
+    @Autowired
+    private  JavaMailSender mailSender;
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -37,7 +40,15 @@ public class EmailServiceImpl implements EmailService {
         message.setTo(to);
         message.setSubject(title);
         message.setText(content);
-        mailSender.send(message);
-        logger.info("邮件发送成功");
+        System.out.println("发送message是"+message);
+        try {
+            mailSender.send(message);
+            logger.info("邮件发送成功");
+        } catch (Exception e) {
+
+            logger.error("发送邮件时发生异常了！", e);
+
+        }
+
     }
 }

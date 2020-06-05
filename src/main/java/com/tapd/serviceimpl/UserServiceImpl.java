@@ -71,6 +71,8 @@ public class UserServiceImpl implements UserService {
         // 如果用户输入的账号对应的密码与用户输入的密码不匹配的话
         if (!user.getUser_password().equals(password)) {
             // 返回null ，说明不能保持用户登录状态
+            System.out.println("用户密码Wie："+user.getUser_password());
+            System.out.println("输入的密码Wie："+password);
             return null;
         } else {
             // 如果相等，就说明，账号密码正确，即可以保存用户状态

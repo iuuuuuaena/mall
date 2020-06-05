@@ -4,9 +4,13 @@ import com.tapd.entities.UserLoginStatus;
 import com.tapd.enums.ResponseStatus;
 import com.tapd.utils.CookieUtil;
 import com.tapd.utils.ResultUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +24,8 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class LogoutController  extends BaseController{
 
+
+    Logger logger = LoggerFactory.getLogger(getClass());
 
 
     //--------------------------------后台管理----------------------------------
@@ -36,7 +42,6 @@ public class LogoutController  extends BaseController{
         return "redirect:login";
     }
 
-
     //--------------------------------前端商城------------------------------------
 
 
@@ -46,10 +51,12 @@ public class LogoutController  extends BaseController{
      * @param response
      * @return
      */
-    @PostMapping("/user/logout")
+    @ResponseBody
+    @GetMapping("/u/logout")
     public Object mallLogout(HttpServletRequest request, HttpServletResponse response){
         // 首先判断 用户登录状态
         UserLoginStatus userLoginStatus = getUserLoginStatus(request);
+
         if (userLoginStatus == null) {
             // 如果已经注销了，就返回已经注销
             return ResultUtils.fail(ResponseStatus.HAS_LOGOUT);

@@ -47,8 +47,8 @@ public class RegisterController {
      */
     @GetMapping(value = "/mail/register")
     public String registerManagementBackground(@RequestParam("username") String username,
-                           @RequestParam("password") String password,
-                           @RequestParam("email") String email, Map<String, String> map) {
+                                               @RequestParam("password") String password,
+                                               @RequestParam("email") String email, Map<String, String> map) {
 
         System.out.println("username:" + username);
         System.out.println("password:" + password);
@@ -89,16 +89,22 @@ public class RegisterController {
 
     /**
      * 前端商城处理注册操作
-     * @param user
+     *
+     * @param
      * @param session
-     * @return   返回相应的结果
+     * @return 返回相应的结果
      */
-    @PostMapping("/user/register")
-    public Object registerMall(@RequestBody User user, HttpSession session) {
+    @ResponseBody
+    @GetMapping("/u/register")
+    public Object registerMall(@RequestParam("username") String username,
+                               @RequestParam("password") String password,
+                               @RequestParam("email") String email, HttpSession session) {
+        User user = new User(null, null, username, password, null, null, null, null, null, null, null, email);
         // 获取session中的验证码
         String code = (String) session.getAttribute("code");
         // 如果验证码为空 或者 验证码不是ok
         if (code == null || !code.equals("ok")) {
+            System.out.println("code为" + code);
             return ResultUtils.fail(ResponseStatus.NO_CODE);
         }
         // 注册失败
@@ -112,15 +118,18 @@ public class RegisterController {
 
     /**
      * 获取验证码
-     * @param map
+     *
+     * @param
      * @param session
      * @return
      */
-    @PostMapping("/email/getCode")
-    public Object getCode(@RequestBody Map<String, String> map, HttpSession session)  {
+    @ResponseBody
+    @GetMapping("/email/getCode")
+    public Object getCode(@RequestParam("email") String email, HttpSession session) {
         // 从请求的map中获取email
-        String email = map.get("email");
+        // String email = map.get("email");
         // 如果验证码为空，返回参数错误
+        System.out.println("email是" + email);
         if (email == null) {
             return ResultUtils.fail(ResponseStatus.PARAM_ERROR);
         }
@@ -134,7 +143,7 @@ public class RegisterController {
         emailService.sendSimpleMail(email, "mall-email-code:", code);
         // 在把code放入session中
         session.setAttribute("code", code);
-        logger.info("code:为"+code);
+        logger.info("code:为" + code);
         //  返回验证码创建成功
         return ResultUtils.ok(ResponseStatus.CODE_GET_SUCCESS);
     }
@@ -142,33 +151,43 @@ public class RegisterController {
 
     /**
      * 检查验证码的操作
-     * @param map
+     *
+     * @param
      * @param session
      * @return
      */
-    @PostMapping("/email/checkCode")
-    public Object checkCode(@RequestBody Map<String, String> map, HttpSession session) {
+    @ResponseBody
+    @GetMapping("/email/checkCode")
+    public Object checkCode(@RequestParam("email") String email,
+                            @RequestParam("code") String code, HttpSession session) {
         // 从map中获取验证码
-        String code = map.get("code");
+        // String code = map.get("code");
+        System.out.println("正在进行验证码验证阶段");
         // 如果验证码为空，返回参数错误
+        System.out.println("手机上获取的验证码为"+code);
         if (code == null) {
+            logger.error("验证码传入错误");
+            System.out.println("验证码错误");
             return ResultUtils.fail(ResponseStatus.PARAM_ERROR);
         }
         // 从session中获取验证码，
         String rel_code = (String) session.getAttribute("code");
+        System.out.println("从session中获取的code为：");
         // 如果没有code，就是还没发送验证码
         if (rel_code == null) {
+            logger.error("还没发送验证码，就检查验证码？");
             return ResultUtils.fail(ResponseStatus.NO_CODE);
         }
         // 如果验证码不正确，返回验证码不匹配
         if (!code.equals(rel_code)) {
+            System.out.println("验证码不匹配");
+            logger.error("验证码不匹配");
             return ResultUtils.fail(ResponseStatus.VEL_CODE_ERROR);
         }
         // 在session中把验证码设置为   OK ,表示，验证码验证成功，接下来应该去登录了！！！！
         session.setAttribute("code", "ok");
         return ResultUtils.ok(ResponseStatus.CODE_CHECK_SUCCESS);
     }
-
 
 
 }

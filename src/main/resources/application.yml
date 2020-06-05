@@ -10,8 +10,8 @@ spring:
   mail:
     host: smtp.qq.com
     port: 465
-    username: waniiu@126.com
-    password: qq 邮箱生成的授权码***(下文介绍如何获取)***
+    username: 2291146413@qq.com
+    password: txksjhwwgkjceace  # 第三放灯路的授权码
     default-encoding: utf-8
     properties:
       mail:
@@ -19,7 +19,18 @@ spring:
           ssl:
             enable: true #一定要开启ssl,不然会503 验证失败的
 
- # 设置开发环境的配置文件
+
+
+file:
+  img:
+    path: /my-mall-img/
+
+jwt:
+  secret: my-mall
+  expiration: 604800
+
+
+# 设置开发环境的配置文件
 #  profiles:
 #    active: dev
 
@@ -32,14 +43,6 @@ spring:
 #  config-location: classpath:mybatis/mybatis-config.xml # 指定全局配置文件的位置
 #  mapper-locations: classpath:mybatis/mapper/*.xml # 指定sql映射文件的位置，*是包括所有的
 #  type-aliases-package: com.tapd.entities # MyBatis注解形式扫描实体类路径
-
-file:
-  img:
-    path: /my-mail-img/
-
-jwt:
-  secret: my-mail
-  expiration: 648000
 
 
 

@@ -3,6 +3,7 @@ package com.tapd.serviceimpl;
 import com.tapd.service.FileService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -14,6 +15,7 @@ import java.util.UUID;
  * @Date 2020-06-04  16:38
  * @Version 1.0
  */
+@Service
 public class FileServiceImpl implements FileService {
 
     Logger logger = LoggerFactory.getLogger(getClass());

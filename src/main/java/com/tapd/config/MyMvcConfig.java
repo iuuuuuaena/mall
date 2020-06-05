@@ -38,15 +38,15 @@ public class MyMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/index").setViewName("login.html");
         registry.addViewController("/register").setViewName("register.html");
     }
-
-    // 注册拦截器
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        // 不能把所有的都拦截了，把我们的css 都留下来
-        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/index.html", "/", "/manager/login", "/webjars/**", "/assert/**", "/login", "/manager/**", "/user", "/users/**", "/managers", "/manageradd"
-                        , "/department", "/department/**", "/show", "/hello", "/user", "/users", "/users/**", "/mail/**","/register.html","/register");
-    }
+    //
+    // // 注册拦截器
+    // @Override
+    // public void addInterceptors(InterceptorRegistry registry) {
+    //     // 不能把所有的都拦截了，把我们的css 都留下来
+    //     registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+    //             .excludePathPatterns("/index.html", "/manager/login", "/webjars/**", "/assert/**", "/login", "/manager/**", "/user", "/users/**", "/managers", "/manageradd"
+    //                     , "/department", "/department/**", "/show", "/hello", "/users","/mall/**","/register.html","/register","/user/**");
+    // }
 
     @Bean
     public WebMvcConfigurerAdapter webMvcAutoConfigurationAdapter() {
@@ -65,25 +65,6 @@ public class MyMvcConfig implements WebMvcConfigurer {
         };
         return adapter;
     }
-
-
-    // // 把/ 和 /index.html都映射到 login页面
-    // @Bean
-    // public WebMvcConfigurerAdapter webMvcAutoConfigurationAdapter(){
-    //     WebMvcConfigurerAdapter adapter = new WebMvcConfigurerAdapter() {
-    //         @Override
-    //         public void addViewControllers(ViewControllerRegistry registry) {
-    //             registry.addViewController("/").setViewName("login");
-    //             registry.addViewController("/login").setViewName("login");
-    //             registry.addViewController("/login.html").setViewName("login");
-    //             registry.addViewController("/index").setViewName("login");
-    //             registry.addViewController("/index.html").setViewName("login");
-    //             // 把main.html映射到dashboard页面
-    //             registry.addViewController("/main.html").setViewName("dashboard");
-    //         }
-    //     };
-    //     return adapter;
-    // }
 
     // 国际化：让浏览器用我们的自己写的localeresolver
     @Bean
@@ -142,6 +123,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     //     return factory.createMultipartConfig();
     // }
 
+
     private CorsConfiguration buildConfig() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.addAllowedOrigin("*"); //允许任何域名
@@ -150,12 +132,12 @@ public class MyMvcConfig implements WebMvcConfigurer {
         return corsConfiguration;
     }
 
-    @Bean
-    public CorsFilter corsFilter() {
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", buildConfig()); //注册
-        return new CorsFilter(source);
-    }
+    // @Bean
+    // public CorsFilter corsFilter() {
+    //     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+    //     source.registerCorsConfiguration("/**", buildConfig()); //注册
+    //     return new CorsFilter(source);
+    // }
 
 
 

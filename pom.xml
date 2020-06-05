@@ -16,10 +16,10 @@
 
     <properties>
         <java.version>1.8</java.version>
-<!--        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>-->
-<!--        &lt;!&ndash; 布局功能的支持程序  thymeleaf3主程序  layout2以上版本 &ndash;&gt;-->
-<!--        &lt;!&ndash; thymeleaf2   layout1&ndash;&gt;-->
-<!--        <thymeleaf-layout-dialect.version>2.0.2</thymeleaf-layout-dialect.version>-->
+        <!--        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>-->
+        <!--        &lt;!&ndash; 布局功能的支持程序  thymeleaf3主程序  layout2以上版本 &ndash;&gt;-->
+        <!--        &lt;!&ndash; thymeleaf2   layout1&ndash;&gt;-->
+        <!--        <thymeleaf-layout-dialect.version>2.0.2</thymeleaf-layout-dialect.version>-->
     </properties>
 
     <dependencies>
@@ -48,14 +48,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-<!--jquery-->
+        <!--jquery-->
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>jquery</artifactId>
             <version>3.5.1</version>
         </dependency>
 
-<!--        Bootscript-->
+        <!--Bootscript-->
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
@@ -125,7 +125,6 @@
         </dependency>
 
 
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
@@ -138,6 +137,7 @@
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
         </dependency>
+        
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>

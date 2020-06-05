@@ -58,15 +58,13 @@ public class JwtTokenUtils {
         // 根据map信息生成token
         return Jwts.builder()
                 .setClaims(claims)
-                .setExpiration(generateExpirationDate())  // 设置过期时间
-                .signWith(SignatureAlgorithm.HS512, secret)   // 设置 签证信息
+                .setExpiration(this.generateExpirationDate())  // 设置过期时间
+                .signWith(SignatureAlgorithm.HS512, "my-mall")   // 设置 签证信息
                 .compact();
     }
 
     /**
      * 从token中获取JWT中的负载
-     * <p>
-     * <p>
      * Claim的意思是：要求，也就是里面的字段
      */
     private Claims getClaimsFromToken(String token) {
@@ -86,7 +84,9 @@ public class JwtTokenUtils {
      * 生成token的过期时间
      */
     private Date generateExpirationDate() {
-        return new Date(System.currentTimeMillis() + expiration * 1000);
+        System.out.println("当前时间为："+System.currentTimeMillis());
+        System.out.println("失效时间为:"+expiration);
+        return new Date(System.currentTimeMillis() + 604800 * 1000);
     }
 
     /**
@@ -140,16 +140,17 @@ public class JwtTokenUtils {
     public String generateToken(UserLoginStatus userLoginStatus) {
         Map<String, Object> claims = new HashMap<>(2);
         try {
-
+            System.out.println("1.claims为："+claims);
             // 先把sub和这个登录状态信息放入
             claims.put(CLAIM_KEY_USERNAME, new ObjectMapper().writeValueAsString(userLoginStatus));
+            System.out.println("2.claims为："+claims);
         } catch (JsonProcessingException e) {
             System.out.println("JwtTokenUTil的generateToken生成的Token有问题！");
             e.printStackTrace();
         }
         // 再把已创造和时间放入
         claims.put(CLAIM_KEY_CREATED, new Date());
-        return generateToken(claims);
+        return this.generateToken(claims);
     }
 
     /**

@@ -4,6 +4,7 @@ import com.tapd.entities.Department;
 import com.tapd.entities.Employee;
 import com.tapd.entities.User;
 import com.tapd.serviceimpl.UserServiceImpl;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,6 +38,7 @@ public class UserController {
     public String usersList(Model model){
         List<User> allUser = userServiceImpl.findAll();
         model.addAttribute("users",allUser);
+        System.out.println("正在进入用户列表界面");
         // 默认拼串，拼到classpath：/templates/ xxx.html
         return "user/list";
     }
@@ -98,7 +100,7 @@ public class UserController {
     }
 
 
-    @RequestMapping(value = "/user/{account}",method = RequestMethod.DELETE)
+    @PostMapping(value = "/user/{account}")
     public String deleteUser(@PathVariable("account")String account){
         System.out.println("要删除的员工account为:"+account);
         userServiceImpl.delete(account);
