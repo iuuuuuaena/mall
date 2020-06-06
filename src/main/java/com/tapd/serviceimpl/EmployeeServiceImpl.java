@@ -44,6 +44,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public int delete(String account) {
         return employeeMapper.deleteByAccount(account);
     }
+    public int deleteById(int id) {
+        return employeeMapper.deleteById(id);
+    }
 
     @Override
     public int update(Employee employee) {

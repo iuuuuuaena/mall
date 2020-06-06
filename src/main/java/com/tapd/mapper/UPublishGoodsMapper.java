@@ -27,7 +27,7 @@ public interface UPublishGoodsMapper {
      * @param goods_like_name
      * @return
      */
-    @Select("select * from user_publish_goods_table where goods_name like %#{account}%")
+    @Select("select * from user_publish_goods_table where goods_name like %#{goods_like_name}%")
     public List<Goods> findLikeGoods(String goods_like_name);
 
 
@@ -41,9 +41,9 @@ public interface UPublishGoodsMapper {
 
 
     // 回的是插入的条数，也就是插入的商品数量，一般就是一个，批量插入就是多个了
-    @Insert("insert into user_publish_goods_table (user_nickname,user_account,goods_id,goods_name,goods_account,goods_image,goods_info,goods_tag,is_deal)" +
+    @Insert("insert into user_publish_goods_table (user_nickname,user_account,goods_id,goods_name,goods_amount,goods_image,goods_info,goods_tag,is_deal)" +
             "values " +
-            "(#{user_nickname},#{user_account},#{goods_id},#{goods_name},#{goods_account},#{goods_image},#{goods_info},#{goods_tag},#{is_deal})")
+            "(#{user_nickname},#{user_account},#{goods_id},#{goods_name},#{goods_amount},#{goods_image},#{goods_info},#{goods_tag},#{is_deal})")
     public  int insert(Goods goods);
 
 

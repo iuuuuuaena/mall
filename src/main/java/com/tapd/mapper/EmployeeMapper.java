@@ -25,7 +25,7 @@ public interface EmployeeMapper {
      * @param id
      * @return
      */
-    @Select("select * from manager_info_table where manaegr_id = #{id}")
+    @Select("select * from manager_info_table where manager_id = #{id}")
     public Employee findById(Integer id);
 
     /**
@@ -43,8 +43,17 @@ public interface EmployeeMapper {
      * @param manager_account
      * @return
      */
-    @Delete("DELETE FROM manager_info_table WHERE user_account = #{manager_account}")
+    @Delete("DELETE FROM manager_info_table WHERE manager_account = #{manager_account}")
     public int  deleteByAccount(String manager_account);
+
+    /**
+     *  通过id删除用户
+     * @param id
+     * @return
+     */
+    @Delete("DELETE FROM manager_info_table WHERE manager_id = #{id}")
+    public int  deleteById(int id);
+
 
     /**
      * 插入用户

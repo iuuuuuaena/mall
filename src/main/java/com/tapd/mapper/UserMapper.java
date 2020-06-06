@@ -66,9 +66,9 @@ public interface UserMapper {
      * @param user
      * @return  返回的是插入的条数，也就是插入的用户数量，一般就是一个，批量插入就是多个了
      */
-    @Insert("insert into user_info_table (user_account,user_password,user_email)" +
+    @Insert("insert into user_info_table (user_nickname,user_account,user_password,user_age,user_gender,user_hobby,user_icon,user_qq,user_card,all_deal_amount,user_email)" +
             "values " +
-            "(#{user_account},#{user_password},#{user_email})")
+            "(#{user_nickname},#{user_account},#{user_password},#{user_age},#{user_gender},#{user_hobby},#{user_icon},#{user_qq},#{user_card},#{all_deal_amount},#{user_email})")
     public int insert(User user);
 
     /**

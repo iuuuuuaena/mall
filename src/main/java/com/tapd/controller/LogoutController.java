@@ -35,7 +35,7 @@ public class LogoutController  extends BaseController{
      * @param session
      * @return
      */
-    @RequestMapping("/mail/logout")
+    @RequestMapping("/mall/logout")
     public String logoutManagementBackground(HttpSession session) {
         // 让session立即失效
         session.invalidate();
@@ -56,11 +56,12 @@ public class LogoutController  extends BaseController{
     public Object mallLogout(HttpServletRequest request, HttpServletResponse response){
         // 首先判断 用户登录状态
         UserLoginStatus userLoginStatus = getUserLoginStatus(request);
-
+        System.out.println("用户正在注销");
         if (userLoginStatus == null) {
             // 如果已经注销了，就返回已经注销
             return ResultUtils.fail(ResponseStatus.HAS_LOGOUT);
         }
+        System.out.println("当用户登录状态是"+userLoginStatus);
         // 如果没有注销，就设置cookie的属性Authorization 为null，即登录状态注销
         CookieUtil.setCookie(response, "Authorization", null);
         // 返回注销成功

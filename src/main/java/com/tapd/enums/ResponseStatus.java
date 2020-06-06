@@ -35,8 +35,17 @@ public enum ResponseStatus {
     /**
      * 商品相关错误
      */
-    NO_GOODS(600,"没有s商品"),
-    HAS_COLLECT(601,"已经收藏过该商品了"),
+
+    NO_GOODS(600,"没有找到该商品"),
+    GOODS_COLLECT_SUCCESS(601,"收藏商品成功"),
+    GOODS_COLLECT_FAIL(602,"收藏商品失败"),
+    GOODS_CANCEL_COLLECT_SUCCESS(603,"商品拿出购物车成功"),
+    GOODS_CANCEL_COLLECT_FAIL(604,"商品拿出购物车失败"),
+    HAS_COLLECT(605,"已经收藏过该商品了"),
+    GOODS_PUBLISH_SUCCESS(606,"商品上传成功"),
+    GOODS_PUBLISH_FAIL(607,"商品上传失败"),
+    GOODS_DELETE_SUCCESS(608,"商品删除成功"),
+    GOODS_DELETE_FAIL(609,"商品删除失败"),
     /**
      * 用户相关错误
      *
@@ -56,13 +65,23 @@ public enum ResponseStatus {
     /**
      * 评论相关错误
      * */
-    HAS_COMMENTS(3001, "已评价过该商品！"),
-    NO_BUY(3002,"没有购买该商品"),
+    DISCUSS_COMMENTS_SUCCESS(3000,"评论发表成功"),
+    DISCUSS_COMMENTS_FAIL(3001,"评论发表失败"),
+    DISCUSS_DELETE_SUCCESS(3002,"评论删除成功"),
+    DISCUSS_DELETE_FAIL(3003,"评论删除失败"),
+    DISCUSS_UPDATE_SUCCESS(3004,"评论修改成功"),
+    DISCUSS_UPDATE_FAIL(3005,"评论修改失败"),
+    HAS_COMMENTS(3006, "已评价过该商品！"),
+    NO_BUY(3007,"没有购买该商品"),
 
     /**
-     * 文件错误
+     * 文件相关
      */
     IMG_UPLOAD_FAIL(4001,"图片上传失败"),
+    IMG_UPLOAD_SUCCESS(4002,"图片上传成功"),
+    IMG_UPDATE_SUCCESS(4003,"图片更新成功"),
+    IMG_UPDATE_FAIL(4004,"图片更新失败"),
+
 
     /**
      * 商品相关错误

@@ -34,19 +34,20 @@ public class MyMvcConfig implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
 
         // 视图映射，把/hello请求映射到index，浏览器访问hello，会映射到到index
-        registry.addViewController("/login").setViewName("login.html");
         registry.addViewController("/index").setViewName("login.html");
+        registry.addViewController("/login").setViewName("login.html");
         registry.addViewController("/register").setViewName("register.html");
     }
-    //
-    // // 注册拦截器
-    // @Override
-    // public void addInterceptors(InterceptorRegistry registry) {
-    //     // 不能把所有的都拦截了，把我们的css 都留下来
-    //     registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-    //             .excludePathPatterns("/index.html", "/manager/login", "/webjars/**", "/assert/**", "/login", "/manager/**", "/user", "/users/**", "/managers", "/manageradd"
-    //                     , "/department", "/department/**", "/show", "/hello", "/users","/mall/**","/register.html","/register","/user/**");
-    // }
+
+    // 注册拦截器
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        // 不能把所有的都拦截了，把我们的css 都留下来
+        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+                .excludePathPatterns("/webjars/**", "/asserts/**", "/login", "/manager/**","/managers","/user/**",
+                        "/users","/u/**","/email/**","/discuss","/discusses","/discussesId","/discussById",
+                        "/discussByAccount","/discussByGoodsId","/discussCreate","/discussDelete","/discussUpdata");
+    }
 
     @Bean
     public WebMvcConfigurerAdapter webMvcAutoConfigurationAdapter() {
@@ -55,7 +56,6 @@ public class MyMvcConfig implements WebMvcConfigurer {
             public void addViewControllers(ViewControllerRegistry registry) {
                 registry.addViewController("/").setViewName("login");
                 registry.addViewController("/login").setViewName("login");
-                registry.addViewController("/login.html").setViewName("login");
                 registry.addViewController("/index").setViewName("login");
                 registry.addViewController("/index.html").setViewName("login");
                 // 把main.html映射到dashboard页面

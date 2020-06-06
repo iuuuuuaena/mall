@@ -118,7 +118,6 @@ public class RegisterController {
 
     /**
      * 获取验证码
-     *
      * @param
      * @param session
      * @return

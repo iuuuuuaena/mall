@@ -8,4 +8,7 @@ import com.tapd.entities.Employee;
  * @Date 2020-06-01  12:40
  * @Version 1.0
  */
-public interface EmployeeService extends BaseService<Employee>{}
+public interface EmployeeService extends BaseService<Employee>{
+
+    public int deleteById(int id);
+}

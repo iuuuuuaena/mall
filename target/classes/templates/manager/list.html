@@ -81,8 +81,8 @@
                         <td th:text="${manager.all_deal_amount}"></td>
                         <td>
                             <!--修改员工信息和删除按钮-->
-                            <a class="btn btn-sm btn-primary" th:href="@{/manager/}+${manager.manager_account}" >修改</a>
-                            <button th:attr="del_url=@{/manager/}+${manager.manager_account}" class="btn btn-sm btn-danger deleteBtn" >删除</button>
+                            <a class="btn btn-sm btn-primary" th:href="@{/manager/}+${manager.manager_id}" >修改</a>
+                            <button th:attr="del_url=@{/manager/}+${manager.manager_id}" class="btn btn-sm btn-danger deleteBtn" >删除</button>
                         </td>
 
                     </tr>

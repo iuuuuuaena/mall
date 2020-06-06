@@ -29,7 +29,7 @@ public interface DiscussMapper {
     public Discuss findById(Integer discuss_id);
 
 
-    @Insert("insert into user_discuss_table (user_account,user_nickname,discuss_content) values(#{user_account},#{user_nickname},#{discuss_content})")
+    @Insert("insert into user_discuss_table (user_account,user_nickname,goods_id,discuss_content) values(#{user_account},#{user_nickname},#{goods_id},#{discuss_content})")
     public int insert(Discuss discuss);
 
     @Delete("delete from  user_discuss_table where discuss_id = #{discuss_id}")
