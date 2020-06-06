@@ -70,8 +70,7 @@
 								<input  name = "manager_nickname" type="text" th:value="${manager!=null}?${manager.manager_nickname}" class="form-control" placeholder="zhangsan" >
 							</div>
 							<div class="form-group">
-								<p color = "red" th:text = "${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
-								<label>account</label>
+								<p style="color: blue"  th:text = "${msg}" th:if="${not #strings.isEmpty(msg)}">								<label>account</label>
 								<input name ="manager_account" type="text" class="form-control" th:value="${manager!=null}?${manager.manager_account}" placeholder="jxdgogogo@qq.com">
 							</div>
 							<div class="form-group">
@@ -79,43 +78,29 @@
 								<input name ="manager_password" type="text" class="form-control" th:value="${manager!=null}?${manager.manager_password}" placeholder="jxdgogogo@qq.com">
 							</div>
 							<div class="form-group">
-								<!--上传图片-->
-								<label>icon</label>
-								<input type="hidden" id="imageUrl" name="manager_icon" value="" th:if="${manager!=null}" /><br>
-								<!--<img id="imgSrc"  th:class="${manager.manager_icon eq null or manager.manager_icon eq ''}?hidden:''" th:src="${manager.manager_icon}" style="width:100px;"/>-->
-								<input name="file" onchange="fileUpload()" type="file" class="form-control" th:value="${manager!=null}?${manager.manager_icon}" >
+								<label>图片上传</label>
+								<img id ="iiii" th:src="${manager!=null}?${manager.manager_icon}" >
+								<!--这个是上传图片的，-->
+								<input name ="file" form="form2" type="file" class="form-control" >
+								<input class="btn btn-sm btn-success" form ="form2" id ="fileBtn" value="上传" type="button"  onclick="uploadImg()" >
+								<!--这个是隐藏的-->
+								<input id="icon" name ="user_icon"   type="hidden" class="form-control" th:value="${manager!=null}?${manager.manager_icon}" placeholder="null">
+
 							</div>
 							<div class="form-group">
 								<label>allDealAmount</label>
 								<input name ="all_deal_amount" type="text" class="form-control" th:value="${manager!=null}?${manager.all_deal_amount}" placeholder="jxdgogogo@qq.com">
 							</div>
 
-							<!--<div class="form-group">-->
-							<!--	<label>Gender</label><br/>-->
-							<!--	<div class="form-check form-check-inline">-->
-							<!--		<input  name = "gender" class="form-check-input" th:checked="${manager!=null}?${manager.manager_ap==1}" type="radio"   value="1">-->
-							<!--		<label class="form-check-label">男</label>-->
-							<!--	</div>-->
-							<!--	<div class="form-check form-check-inline">-->
-							<!--		<input name = "gender" class="form-check-input"th:checked="${manager!=null}?${manager.gender==0}" type="radio"  value="0">-->
-							<!--		<label  class="form-check-label">女</label>-->
-							<!--	</div>-->
-							<!--</div>-->
-							<!--<div class="form-group">-->
-							<!--	<label>department</label>-->
-							<!--	 提交的是部门id-->
-							<!--	<select class="form-control" name="department.id">-->
-							<!--		<option th:value="${dept.id}" th:each="dept:${depts} " th:text="${dept.departmentName}"  th:selected="${manager!=null}?${dept.id == manager.department.id}"></option>-->
-							<!--	</select>-->
-							<!--</div>-->
-							<!--<div class="form-group">-->
-							<!--	<label>Birth</label>-->
-							<!--	<input name ="birth" type="text" class="form-control" placeholder="2016/12/10" th:value="${manager!=null}?${#dates.format(manager.birth,'yyyy/MM/dd')}">-->
-							<!--</div>-->
+
 							<button type="submit" class="btn btn-primary"  th:text="${manager!=null}?'修改':'添加'">添加</button>
 						</form>
 					</div>
 				</main>
+
+				<form id = "form2" method="post" enctype="multipart/form-data">
+
+				</form>
 			</div>
 		</div>
 
@@ -124,7 +109,7 @@
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.5.1/dist/jquery.js}"></script>
 		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/webjars/popper.js/1.11.1/dist/popper.js}"></script>
-		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.0.4/js/bootstrap.js}"></script>
+		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.js}"></script>
 
 		<!-- Icons -->
 		<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
@@ -165,36 +150,33 @@
 		</script>
 
 
-	<script>
-		function fileUpload() {
-			alert("点我干嘛！")
-			var option = {
-				type:'post',
-				url:'/mFileUpload',
-				dataType:'json',
-				data:{
-					fileName : 'file'
-				},
-				success:function(data){
-					//把json串转换成json对象
-					//var jsonObj = $.parseJSON(data);
-					//alert(data);
-					//返回服务器图片路径，把图片路径设置给img标签
-					$("#imgSrc").attr("src",data.fullPath);
+		<script>
 
-					// 显示图片
-					$("#imgSrc").removeClass("hidden");
+			function uploadImg(){
+				var formData = new FormData($("#form2")[0]);
+				$.ajax({
+					async : false,
+					cache : false,
+					type : "post",
+					data : formData,
+					url : 'http://localhost:8080/mUpload',
+					dataType : 'json',
+					contentType: false, //必须
+					processData: false, //必须
+					success : function(data) {
+						console.log("上传文件成功:"+data)
+						$("#iiii").attr("src", '/asserts'+data.path)
+						$("#icon").attr("value",'/asserts'+data.path)
+						alert("success: "+data)
+					},
+					error : function(arg1, arg2, arg3) {
+						console.log(arg1 + "--" + arg2 + "--" + arg3);
+					}
 
-					//数据库保存相对路径
-					$("#imageUrl").val(data.relativePath);
-					//alert($("#imageUrl").val());
-				}
-			};
+				});
+			}
 
-			$("#form").ajaxSubmit(option);
-		}
-	</script>
-
+		</script>
 	</body>
 
 </html>

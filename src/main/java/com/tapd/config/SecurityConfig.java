@@ -45,7 +45,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // 请求授权的规则！！！
         //首页可以访问
         http.authorizeRequests().antMatchers("/").permitAll()
-                .antMatchers("/**").permitAll()
                 .antMatchers("/index").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/register").permitAll()

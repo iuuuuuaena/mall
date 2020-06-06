@@ -78,7 +78,7 @@
                         <td>
                             <!--修改员工信息和删除按钮-->
                             <!--<a class="btn btn-sm btn-primary" th:href="@{/manager/}+${manager.manager_account}" >修改</a>-->
-                            <form  id ="deleteDiscussFrom" th:action="@{/discuss/}+${discuss.getDiscuss_id()}"  method="post">
+                            <form  id ="deleteDiscussFrom" th:action="@{/discuss/}+${discuss.getDiscuss_id()}" >
                                 <input  type="hidden" name="_method" value="delete"/>
                                 <button  class="btn btn-sm btn-danger deleteBtn"  type="submit">删除</button>
                             </form>
@@ -99,7 +99,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.5.1/dist/jquery.js}"></script>
 <script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/webjars/popper.js/1.11.1/dist/popper.js}"></script>
-<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.0.4/js/bootstrap.js}"></script>
+<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.js}"></script>
 
 <!-- Icons -->
 <script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>

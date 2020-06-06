@@ -26,11 +26,12 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
             request.setAttribute("msg","没有权限");
             request.getRequestDispatcher("/index.html")
                     .forward(request,response);
+            return false;
         }else{
             // 以登录
             return true;
         }
-        return false;
+
     }
 
     @Override

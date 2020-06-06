@@ -70,7 +70,7 @@
 								<input   name = "user_nickname"type="text" th:value="${user!=null}?${user.user_nickname}" class="form-control" placeholder="张三" >
 							</div>
 							<div class="form-group">
-								<p color = "red" th:text = "${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+								<p style="color: red"  th:text = "${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
 								<label>账号</label>
 								<input  name ="user_account" type="text" class="form-control" th:value="${user!=null}?${user.user_account}" placeholder="abcdefg">
 							</div>
@@ -102,12 +102,13 @@
 
 							<div class="form-group">
 
-								<label>图片上传</label> <img th:if="${filePath!=null}" th:src="'/file/'+${filePath}" >
+								<label>图片上传</label>
+								<img id ="iiii" th:src="${user!=null}?${user.user_icon}" >
 								<!--这个是上传图片的，-->
-								<!--<input name ="icon" form="form2" type="file" class="form-control" th:value="${file!=null}?${file}">-->
-								<!--<input class="btn btn-sm btn-success"  form="form2"  type="submit" >-->
+								<input name ="file" form="form2" type="file" class="form-control" >
+								<input class="btn btn-sm btn-success" form ="form2" id ="fileBtn" value="上传" type="button"  onclick="uploadImg()" >
 								<!--这个是隐藏的-->
-								<input name ="user_icon"    value="" type="hidden" class="form-control" th:value="${user!=null}?${user.user_icon}" placeholder="null">
+								<input id="icon" name ="user_icon"   type="hidden" class="form-control" th:value="${user!=null}?${user.user_icon}" placeholder="null">
 							</div>
 							<div class="form-group">
 								<label>QQ</label>
@@ -121,15 +122,6 @@
 								<label>Email</label>
 								<input   name ="user_email" type="text" class="form-control" th:value="${user!=null}?${user.user_email}" placeholder="zhangsan@atguigu.com">
 							</div>
-
-
-							<!--<div class="form-group">-->
-							<!--	<label>department</label>-->
-							<!--	&lt;!&ndash; 提交的是部门id&ndash;&gt;-->
-							<!--	<select class="form-control" name="department.id">-->
-							<!--		<option th:value="${dept.id}" th:each="dept:${depts} " th:text="${dept.departmentName}"  th:selected="${user!=null}?${dept.id == user.department.id}"></option>-->
-							<!--	</select>-->
-							<!--</div>-->
 							<div class="form-group">
 								<label>交易总金额</label>
 								<input   name ="all_deal_amount" type="text" class="form-control" th:value="${user!=null}?${user.all_deal_amount}" placeholder="0.0">
@@ -138,9 +130,9 @@
 						</form>
 
 
-						<!--<form action="/upload"  id = "form2" method="post" enctype="multipart/form-data">-->
+						<form id = "form2" method="post" enctype="multipart/form-data">
 
-						<!--</form>-->
+						</form>
 					</div>
 				</main>
 			</div>
@@ -191,6 +183,34 @@
 			});
 		</script>
 
+
+		<script>
+
+			function uploadImg(){
+				var formData = new FormData($("#form2")[0]);
+				$.ajax({
+					async : false,
+					cache : false,
+					type : "post",
+					data : formData,
+					url : 'http://localhost:8080/mUpload',
+					dataType : 'json',
+					contentType: false, //必须
+					processData: false, //必须
+					success : function(data) {
+						console.log("上传文件成功:"+data)
+						$("#iiii").attr("src", '/asserts'+data.path)
+						$("#icon").attr("value",'/asserts'+data.path)
+						alert("success: "+data)
+					},
+					error : function(arg1, arg2, arg3) {
+						console.log(arg1 + "--" + arg2 + "--" + arg3);
+					}
+
+				});
+			}
+
+		</script>
 
 	<!--图片提交-->
 	<script>

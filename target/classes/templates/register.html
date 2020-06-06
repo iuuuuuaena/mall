@@ -15,20 +15,21 @@
 <body class="text-center">
 <!--让我们的form表单来提交Post请求，url是/users/login-->
 <form class="form-signin" action="#" th:action="@{/mall/register}" th:method="get">
-    <img class="mb-4"  src="asserts/img/bootstrap-solid.svg" th:src="@{/asserts/img/bootstrap-solid.svg}" alt="" width="72" height="72">
+    <img class="mb-4"  src="asserts/img/icon.png" th:src="@{/asserts/img/icon.png}" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
     <!--提示的标签-->
-    <p color = "red" th:text = "${msg}" th:if="${not #strings.isEmpty(msg)}" ></p>
+    <p style="color: blue" th:text = "${msg}" th:if="${not #strings.isEmpty(msg)}" ></p>
     <span id="trip"></span>
-    <label class="sr-only" th:text="#{login.username}">Username</label>
-    <input type="text" name = "username" class="form-control" placeholder="Username" th:placeholder="#{login.username}"required="" autofocus="">
-    <label class="sr-only" th:text="#{login.password}">Email</label>
-    <input type="email" name = "email"  class="form-control" placeholder="Email"th:placeholder="#{login.email}" required="">
-    <label class="sr-only" th:text="#{login.password}">Password</label>
-    <input  id ="pwd1" type="password" name = "password" class="form-control" placeholder="Password"th:placeholder="#{login.password}" required="">
+    <!--<label class="sr-only" th:text="#{login.username}">Username</label>-->
 
-    <label class="sr-only" th:text="#{login.password}">Again</label>
-    <input id ="pwd2" type="password" class="form-control" οnkeyup="validate()" placeholder="Again" th:placeholder="#{login.password}" required="">
+    <input type="text" name = "username" class="form-control" placeholder="Username" th:placeholder="#{login.username}"required="" autofocus="">
+    <!--<label class="sr-only" th:text="#{login.password}">Email</label>-->
+
+    <input type="email" name = "email"  class="form-control" placeholder="Email"th:placeholder="#{login.email}" required="">
+    <!--<label class="sr-only" th:text="#{login.password}">Password</label>-->
+    <input  id ="pwd1" type="password" name = "password" class="form-control" placeholder="Password"th:placeholder="#{login.password}" required="">
+    <!--<label class="sr-only" th:text="#{login.password}">Again</label>-->
+    <input id ="pwd2" type="password" class="form-control" onkeydown="validate()" placeholder="Again" th:placeholder="#{login.password}" required="">
 
     <!--<div class="checkbox mb-3">-->
     <!--    <label>-->
@@ -37,8 +38,8 @@
     <!--</div>-->
     <button id = "submit" class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{login.btn}">Register</button>
     <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
-    <a class="btn btn-sm" th:href="@{/index.html(l='zh_CN')}">中文</a>
-    <a class="btn btn-sm" th:href="@{/index.html(l='en_US')}">English</a>
+    <!--<a class="btn btn-sm" th:href="@{/index.html(l='zh_CN')}">中文</a>-->
+    <!--<a class="btn btn-sm" th:href="@{/index.html(l='en_US')}">English</a>-->
     <a class="btn btn-sm" href="/login.html" th:href="@{/login}">已有账号？去登陆</a>
 
 </form>

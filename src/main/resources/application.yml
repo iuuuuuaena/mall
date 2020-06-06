@@ -1,29 +1,16 @@
-# jdbc连接mysql  -- 开发
-spring:
-  datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://47.97.184.36:3306/mail
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  # https://blog.csdn.net/weixin_42992109/article/details/88412540
-  # 发送邮件
-  mail:
-    host: smtp.qq.com
-    port: 465
-    username: 2291146413@qq.com
-    password: txksjhwwgkjceace  # 第三放灯路的授权码
-    default-encoding: utf-8
-    properties:
-      mail:
-        smtp:
-          ssl:
-            enable: true #一定要开启ssl,不然会503 验证失败的
+
+
 
 
 
 file:
   img:
     path: /my-mall-img/
+  mimg:
+    path: /my-management-img/
+  real:
+    path: /Users/mac/大学学习整理/java/managementplatform2/target/my-management-img/
+
 
 jwt:
   secret: my-mall

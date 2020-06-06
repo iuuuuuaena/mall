@@ -45,7 +45,7 @@ public class RegisterController {
      * @param map      返回的信息
      * @return
      */
-    @GetMapping(value = "/mail/register")
+    @GetMapping(value = "/mall/register")
     public String registerManagementBackground(@RequestParam("username") String username,
                                                @RequestParam("password") String password,
                                                @RequestParam("email") String email, Map<String, String> map) {

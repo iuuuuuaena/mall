@@ -62,10 +62,10 @@
                     <tr>
 
                         <th>员工ID</th>
+                        <th>员工头像</th>
                         <th>员工昵称</th>
                         <th>员工账号</th>
                         <th>员工密码</th>
-                        <th>员工头像</th>
                         <th>交易金额</th>
                         <th>功能</th>
                     </tr>
@@ -74,10 +74,10 @@
                     <!--添加员工信息-->
                     <tr  th:each="manager:${managers}">
                         <td th:text="${manager.manager_id}"></td>
+                        <td ><img src="#" th:src="${manager.manager_icon}" /></td>
                         <td >[[${manager.manager_nickname}]]</td>
                         <td th:text="${manager.manager_account}"></td>
                         <td th:text="${manager.manager_password}"></td>
-                        <td ><img src="#" th:src="${manager.manager_icon}" /></td>
                         <td th:text="${manager.all_deal_amount}"></td>
                         <td>
                             <!--修改员工信息和删除按钮-->
@@ -102,7 +102,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.5.1/dist/jquery.js}"></script>
 <script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/webjars/popper.js/1.11.1/dist/popper.js}"></script>
-<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.0.4/js/bootstrap.js}"></script>
+<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.js}"></script>
 
 <!-- Icons -->
 <script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
@@ -115,38 +115,6 @@
         return false;
     })
 </script>
-
-<!--&lt;!&ndash; Graphs &ndash;&gt;-->
-<!--<script type="text/javascript" src="asserts/js/Chart.min.js"th:src="@{/asserts/js/Chart.min.js}"></script>-->
-<!--<script>-->
-<!--	var ctx = document.getElementById("myChart");-->
-<!--	var myChart = new Chart(ctx, {-->
-<!--		type: 'line',-->
-<!--		data: {-->
-<!--			labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],-->
-<!--			datasets: [{-->
-<!--				data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],-->
-<!--				lineTension: 0,-->
-<!--				backgroundColor: 'transparent',-->
-<!--				borderColor: '#007bff',-->
-<!--				borderWidth: 4,-->
-<!--				pointBackgroundColor: '#007bff'-->
-<!--			}]-->
-<!--		},-->
-<!--		options: {-->
-<!--			scales: {-->
-<!--				yAxes: [{-->
-<!--					ticks: {-->
-<!--						beginAtZero: false-->
-<!--					}-->
-<!--				}]-->
-<!--			},-->
-<!--			legend: {-->
-<!--				display: false,-->
-<!--			}-->
-<!--		}-->
-<!--	});-->
-<!--</script>-->
 
 </body>
 

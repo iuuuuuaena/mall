@@ -6,7 +6,7 @@ import java.io.File;
 
 public class PathUtil {
     // 根路径
-    private static String ROOT_PATH;
+    private static String ROOT_PATH = "";
 
     static {
         ApplicationHome h = new ApplicationHome(PathUtil.class);

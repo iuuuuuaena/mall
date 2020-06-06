@@ -66,7 +66,24 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
+
+        <!--打包出错：：Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serverEndpointExporter' defined in class path resource [com/tapd/config/MyMvcConfig.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: javax.websocket.server.ServerContainer not available
+-->
+        <!--    出现这个错的原因是在部署项目的时候,项目中含有websocket的@ServerEndpoint注解的时候,
+        如果项目是springboot项目,去除内置tomcat的时候会把websocket的包也给删除掉,所以需要手动加上.
+        加上这个包,然后再打war包,部署到linux的tomcat下就没问题了.
+
+
+        原文链接：https://blog.csdn.net/kxj19980524/article/details/88751114-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <!--webSocket-->
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>

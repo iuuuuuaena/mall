@@ -118,7 +118,7 @@ public class DiscussController {
 
     // 前端页面的更新评论,通过id
     @ResponseBody
-    @PostMapping("/discussUpdata")
+    @PostMapping("/discussUpdate")
     public int updataById(@RequestParam("goods_id")Integer goods_id){
         discussService.update(goods_id);
         return 0;

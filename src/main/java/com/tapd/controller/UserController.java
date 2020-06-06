@@ -59,7 +59,7 @@ public class UserController {
     // 添加员工
     // springMVC会将我们的请求参数和对应的javabean参数一一对应起来，所以叫做自动封装！！！1
     @PostMapping(value = "/user")
-    public String addUsers(@RequestBody User user, Model model) {
+    public String addUsers(User user, Model model) {
 
         System.out.println("要保存的用户数据是" + user);
         if (user.getUser_account() == null || user.getUser_account() == "" || user.getUser_password() == null || user.getUser_password() == "") {

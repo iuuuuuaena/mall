@@ -21,9 +21,16 @@ spring:
 
 
 
+
+
 file:
   img:
     path: /my-mall-img/
+  mimg:
+    path: /my-management-img/
+  real:
+    path: /Users/mac/大学学习整理/java/managementplatform2/target/my-management-img/
+
 
 jwt:
   secret: my-mall
