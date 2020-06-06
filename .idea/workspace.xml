@@ -1,56 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28eb7b5d-eaf8-4647-9063-b240419b28b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/config/CsrfSecurityRequestMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot.log" beforeDir="false" afterPath="$PROJECT_DIR$/springboot.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/config/MyMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/config/MyMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/DiscussController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/DiscussController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/LogoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/enums/ResponseStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/enums/ResponseStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/DiscussMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/DiscussMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UPublishGoodsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UPublishGoodsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/commons/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/commons/bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/config/MyMvcConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/config/MyMvcConfig$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/config/MyMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/config/MyMvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/DiscussController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/DiscussController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/HelloController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/LogoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/LogoutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/enums/ResponseStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/enums/ResponseStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/mapper/DiscussMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/mapper/DiscussMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/mapper/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/mapper/EmployeeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/mapper/UPublishGoodsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/mapper/UPublishGoodsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/commons/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/commons/bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/manager/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/manager/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/manager/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/manager/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/add.html" afterDir="false" />
-    </list>
+    <list default="true" id="28eb7b5d-eaf8-4647-9063-b240419b28b8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/component/LoginHandlerInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            <state relative-caret-position="229">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -701,7 +652,7 @@
       <workItem from="1591336036036" duration="26790000" />
       <workItem from="1591408284857" duration="593000" />
       <workItem from="1591412554844" duration="34000" />
-      <workItem from="1591412619445" duration="8067000" />
+      <workItem from="1591412619445" duration="8315000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1591150758753</created>
@@ -731,7 +682,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591363792012</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="0.0.3  添加商品&#10;--story=1005063  --user=iuuuuuaena">
+      <created>1591424549070</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591424549070</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -764,7 +722,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195013000" />
+    <option name="totallyTimeSpent" value="195261000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -777,9 +735,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49868765" visible="true" weight="0.26466382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49868765" visible="true" weight="0.26466382" />
       <window_info id="Structure" order="1" sideWeight="0.5013123" side_tool="true" weight="0.29756796" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -789,7 +746,7 @@
       <window_info id="Web" order="7" sideWeight="0.5013123" side_tool="true" weight="0.29756796" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939634" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.32939634" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.32939634" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39895013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -862,7 +819,8 @@
     <MESSAGE value="0.0.2 验证码发送&#10;--story=ID1005616  --user=jxd" />
     <MESSAGE value="0.0.2 验证码发送&#10;--story=ID1005616  --user=iuuuuuaena" />
     <MESSAGE value="0.0.3  登录注册登出&#10;--story=1003621  --user=iuuuuuaena" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.3  登录注册登出&#10;--story=1003621  --user=iuuuuuaena" />
+    <MESSAGE value="0.0.3  添加商品&#10;--story=1005063  --user=iuuuuuaena" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.3  添加商品&#10;--story=1005063  --user=iuuuuuaena" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1283,8 +1241,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/component/LoginHandlerInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state relative-caret-position="229">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
         </state>
       </provider>
     </entry>
