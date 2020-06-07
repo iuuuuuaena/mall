@@ -13,34 +13,31 @@ import java.util.List;
 @Mapper
 public interface DiscussMapper {
 
-
     @Select("select * from user_discuss_table")
-    public List<Discuss> showAllDiscuss();
+    List<Discuss> showAllDiscuss();
 
     @Select("select * from user_discuss_table where user_account = #{account}")
-    public List<Discuss> findByAccount(String account);
+    List<Discuss> findByAccount(String account);
 
 
     @Select("select * from user_discuss_table where goods_id = #{id}")
-    public List<Discuss> findByGoodsId(Integer id);
+    List<Discuss> findByGoodsId(Integer id);
 
 
     @Delete("select * from  user_discuss_table where discuss_id = #{discuss_id}")
-    public Discuss findById(Integer discuss_id);
+    Discuss findById(Integer discuss_id);
 
 
     @Insert("insert into user_discuss_table (user_account,user_nickname,goods_id,discuss_content) values(#{user_account},#{user_nickname},#{goods_id},#{discuss_content})")
-    public int insert(Discuss discuss);
+    int insert(Discuss discuss);
 
     @Delete("delete from  user_discuss_table where discuss_id = #{discuss_id}")
-    public int delete(Integer discuss_id);
+    int delete(Integer discuss_id);
 
     @Update("update user_discuss_table " +
-                "set discuss_content = #{discuss_content}" +
+            "set discuss_content = #{discuss_content}" +
             "where discuss_id = #{discuss_id}")
-    public int update(Integer discuss_id);
-
-
+    int update(Discuss discuss);
 
 
 }

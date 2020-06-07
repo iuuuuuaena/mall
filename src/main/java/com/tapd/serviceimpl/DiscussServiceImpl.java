@@ -51,7 +51,7 @@ public class DiscussServiceImpl   implements DiscussService {
     }
 
     @Override
-    public int update(Integer id) {
-        return discussMapper.update(id);
+    public int update(Discuss discuss) {
+        return discussMapper.update(discuss);
     }
 }

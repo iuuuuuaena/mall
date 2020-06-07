@@ -46,6 +46,7 @@ public enum ResponseStatus {
     GOODS_PUBLISH_FAIL(607,"商品上传失败"),
     GOODS_DELETE_SUCCESS(608,"商品删除成功"),
     GOODS_DELETE_FAIL(609,"商品删除失败"),
+    USER_DON_NO_HAVE_GOODS(610,"用户没有商品"),
     /**
      * 用户相关错误
      *
@@ -73,6 +74,7 @@ public enum ResponseStatus {
     DISCUSS_UPDATE_FAIL(3005,"评论修改失败"),
     HAS_COMMENTS(3006, "已评价过该商品！"),
     NO_BUY(3007,"没有购买该商品"),
+    NO_DISCUSS(3008,"没有评论"),
 
     /**
      * 文件相关

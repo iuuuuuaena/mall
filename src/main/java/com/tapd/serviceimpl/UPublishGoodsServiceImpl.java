@@ -17,41 +17,59 @@ import java.util.List;
 public class UPublishGoodsServiceImpl implements UPublishGoodsService {
 
 
-    @Autowired
+
     UPublishGoodsMapper uPublishGoodsMapper;
 
+    @Autowired
+    void setuPublishGoodsMapper(UPublishGoodsMapper uPublishGoodsMapper){this.uPublishGoodsMapper = uPublishGoodsMapper;}
 
-
+    @Override
     public List<Goods> findAll() {
         return uPublishGoodsMapper.showAllGoods();
     }
 
+    @Override
     public Goods findById(Integer id) {
         return uPublishGoodsMapper.findById(id);
     }
 
-
+    @Override
     public List<Goods> findByAccount(String account) {
         return uPublishGoodsMapper.findByAccount(account);
     }
 
-
+    @Override
     public List<Goods> findLikeGoods(String name) {
         return uPublishGoodsMapper.findLikeGoods(name);
     }
 
-
-
+    @Override
     public int create(Goods goods) {
         return uPublishGoodsMapper.insert(goods);
     }
 
-
+    @Override
     public int deleteById(Integer id) {
         return uPublishGoodsMapper.deleteById(id);
     }
 
+    @Override
     public int update(Goods goods) {
         return uPublishGoodsMapper.update(goods);
+    }
+
+    @Override
+    public List<Goods> findByUserAccount(String account) {
+        return uPublishGoodsMapper.findByUserAccount(account);
+    }
+
+    @Override
+    public List<String> findAllTag() {
+        return uPublishGoodsMapper.findAllTag();
+    }
+
+    @Override
+    public List<Goods> findGoodsByTag(String tag) {
+        return uPublishGoodsMapper.findGoodsByTag(tag);
     }
 }

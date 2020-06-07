@@ -7,6 +7,8 @@ package com.tapd.service;
  */
 public interface UserLoginStatusService {
 
-    public void setUserId(Integer id);
-    public void setUsername(String username);
+    void setUserId(Integer id);
+
+    void setUsername(String username);
+
 }

@@ -11,15 +11,25 @@ import java.util.List;
  * @Version 1.0
  */
 // 这个我们没有必要继承基础的service因为有的方法我们不需要实现
-public interface UPublishGoodsService  {
+public interface UPublishGoodsService {
 
-    public List<Goods> findAll();
-    public Goods findById(Integer id);
-    public List<Goods> findByAccount(String account);
-    public List<Goods> findLikeGoods(String name);
-    public int create(Goods goods);
+    List<Goods> findAll();
 
-    public int deleteById(Integer id);
+    Goods findById(Integer id);
 
-    public int update(Goods goods);
+    List<Goods> findByAccount(String account);
+
+    List<Goods> findLikeGoods(String name);
+
+    int create(Goods goods);
+
+    int deleteById(Integer id);
+
+    int update(Goods goods);
+
+    List<Goods> findByUserAccount(String account);
+
+    List<String> findAllTag();
+
+    List<Goods> findGoodsByTag(String tag);
 }

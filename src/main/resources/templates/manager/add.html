@@ -69,8 +69,9 @@
 								<label>nickname</label>
 								<input  name = "manager_nickname" type="text" th:value="${manager!=null}?${manager.manager_nickname}" class="form-control" placeholder="zhangsan" >
 							</div>
+							<p style="color:red"  th:text = "${msg}" th:if="${not #strings.isEmpty(msg)}">
 							<div class="form-group">
-								<p style="color: blue"  th:text = "${msg}" th:if="${not #strings.isEmpty(msg)}">								<label>account</label>
+								<label>account</label>
 								<input name ="manager_account" type="text" class="form-control" th:value="${manager!=null}?${manager.manager_account}" placeholder="jxdgogogo@qq.com">
 							</div>
 							<div class="form-group">
@@ -84,7 +85,7 @@
 								<input name ="file" form="form2" type="file" class="form-control" >
 								<input class="btn btn-sm btn-success" form ="form2" id ="fileBtn" value="上传" type="button"  onclick="uploadImg()" >
 								<!--这个是隐藏的-->
-								<input id="icon" name ="user_icon"   type="hidden" class="form-control" th:value="${manager!=null}?${manager.manager_icon}" placeholder="null">
+								<input id="icon" name ="manager_icon"   type="hidden" class="form-control" th:value="${manager!=null}?${manager.manager_icon}">
 
 							</div>
 							<div class="form-group">
@@ -167,7 +168,7 @@
 						console.log("上传文件成功:"+data)
 						$("#iiii").attr("src", '/asserts'+data.path)
 						$("#icon").attr("value",'/asserts'+data.path)
-						alert("success: "+data)
+						alert("头像上传成功")
 					},
 					error : function(arg1, arg2, arg3) {
 						console.log(arg1 + "--" + arg2 + "--" + arg3);

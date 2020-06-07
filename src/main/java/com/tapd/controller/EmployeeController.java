@@ -71,6 +71,10 @@ public class EmployeeController {
                 || employee.getManager_password() == "") {
             model.addAttribute("msg", "员工账号和不能为空！");
             return "manager/add";
+
+        } else if (employeeServiceImpl.findByAccount(employee.getManager_account()) != null) {
+            model.addAttribute("msg", "员工账号已存在！请重新换一个");
+            return "manager/add";
         } else {
             //保存 用户数据
             System.out.println("保存用户:" + employee);
@@ -124,7 +128,8 @@ public class EmployeeController {
         // 这里把传来的包括id和其他信息自动封装到employee里面，我们来查看是否修改完成
         System.out.println("正在更新这个员工：" + employee);
         // 保存
-        employeeServiceImpl.update(employee);
+        int index = employeeServiceImpl.update(employee);
+        System.out.println("修改的结果为"+index);
         return "redirect:/managers";
     }
 

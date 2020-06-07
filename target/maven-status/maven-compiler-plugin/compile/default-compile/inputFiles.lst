@@ -28,6 +28,7 @@
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/controller/UserController.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/service/EmailService.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/mapper/EmployeeMapper.java
+/Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/service/AlipayService.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/controller/WebSocketController.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/entities/GoodsTransactionRecording.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/serviceimpl/EmployeeServiceImpl.java
@@ -39,16 +40,19 @@
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/controller/DepartmentController.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/serviceimpl/GoodsTransactionRecordingServiceImpl.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/controller/BaseController.java
+/Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/config/AlipayConfig.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/serviceimpl/EmailServiceImpl.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/dao/BeanDao.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/entities/Goods.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/utils/JwtTokenUtils.java
+/Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/controller/AlipayController.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/service/UPublishGoodsService.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/config/MybatisConfig.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/serviceimpl/FileServiceImpl.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/serviceimpl/DiscussServiceImpl.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/config/SecurityConfig.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/config/MyMvcConfig.java
+/Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/serviceimpl/AlipayServiceImpl.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/entities/Discuss.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/controller/LoginController.java
 /Users/mac/大学学习整理/java/managementplatform2/src/main/java/com/tapd/utils/CodeUtil.java

@@ -34,7 +34,7 @@ public interface GoodsTransactionRecordingMapper {
     public int deleteById(Integer id);
 
     /**
-     * 插入发布商品
+     * 插入商品
      *
      * @param goods
      * @return 返回的是插入的条数，也就是插入的商品数量，一般就是一个，批量插入就是多个了

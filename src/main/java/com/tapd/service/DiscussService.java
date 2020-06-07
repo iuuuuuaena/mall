@@ -17,7 +17,7 @@ public interface DiscussService  {
     public List<Discuss> findByGoodsId(Integer id);
     public int create(Discuss discuss);
     public int delete(Integer id);
-    public int update(Integer id);
+    public int update(Discuss discuss);
 
 
 

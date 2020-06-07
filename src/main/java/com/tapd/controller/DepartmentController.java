@@ -31,10 +31,4 @@ public class DepartmentController {
         return departmentServiceImpl.findById(id);
     }
 
-    // @ResponseBody
-    // @RequestMapping("/show")
-    // public String show(){
-    //
-    //     return "123456";
-    // }
 }

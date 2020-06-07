@@ -45,10 +45,12 @@ public class MyMvcConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         // 不能把所有的都拦截了，把我们的css 都留下来
         registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/webjars/**", "/asserts/**", "/login", "/manager/**","/managers","/user/**",
-                        "/users","/u/**","/email/**","/discuss","/discusses","/discussesId","/discussById",
-                        "/discussByAccount","/discussByGoodsId","/discussCreate","/discussDelete","/discussUpdate",
-                        "/upload","/mUpload","/mall/**","/index","/index.html","/main.html","/img/**");
+                .excludePathPatterns("/webjars/**", "/asserts/**", "/login", "/manager/**", "/managers", "/user/**",
+                        "/users", "/u/**", "/email/**", "/discuss", "/discusses", "/discussesId", "/discussById",
+                        "/discussByAccount", "/discussByGoodsId", "/discussCreate", "/discussDelete", "/discussUpdate",
+                        "/upload", "/mUpload", "/mall/**", "/index", "/index.html", "/main.html", "/img/**", "/goods",
+                        "/good/**", "/publishGood", "/goodsList", "/goodsId", "/goodDeleteById", "/goodsName",
+                        "/Room/**","/goodByUserAccount","/showAllTag","/GoodsByTag");
     }
 
     @Bean
@@ -117,15 +119,17 @@ public class MyMvcConfig implements WebMvcConfigurer {
 
     @Value("${file.real.path}")
     private String REAL_IMG_PATH;
+
     /**
      * 图片ResourceHandler
+     *
      * @param registry ResourceHandlerRegistry
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        String imgPath=REAL_IMG_PATH;
+        String imgPath = REAL_IMG_PATH;
         //
-        registry.addResourceHandler("asserts/img/**").addResourceLocations("file:"+imgPath);
+        registry.addResourceHandler("asserts/img/**").addResourceLocations("file:" + imgPath);
         // registry.addResourceHandler("img//**").addResourceLocations(imgPath);
     }
 
@@ -156,7 +160,6 @@ public class MyMvcConfig implements WebMvcConfigurer {
     //     source.registerCorsConfiguration("/**", buildConfig()); //注册
     //     return new CorsFilter(source);
     // }
-
 
 
 }

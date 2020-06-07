@@ -1,3 +1,4 @@
+
 # jdbc连接mysql  -- 开发
 spring:
   datasource:
@@ -22,16 +23,16 @@ spring:
 
 
 
-
 file:
   img:
     path: /my-mall-img/
+  real:
+    path: /root/my-management-img/
   mimg:
     path: /my-management-img/
-  real:
-    path: /Users/mac/大学学习整理/java/managementplatform2/target/my-management-img/
 
 
+#/Users/mac/大学学习整理/java/managementplatform2/target/my-management-img/
 jwt:
   secret: my-mall
   expiration: 604800
