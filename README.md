@@ -38,9 +38,9 @@
 ### API接口
 
 
-部分
+### 后台登录注册和用户CRUD
 
-后台登录注册和用户CRUD
+|登录注册和用户CRUD
 
 | 作用                            | 请求URL         | 请求方式 | 最终去向                 |
 | ------------------------------- | --------------- | -------- | ------------------------ |
@@ -81,9 +81,14 @@
 | 跳转到评论界面，并显示所有评论 | /discuss              | GET      | discuss/list.html |
 | 删除评论                       | /discuss/{discuss_id} | POST     | discuss/list.html |
 
+订单
 
+| 作用           | 请求URL           | 请求方式 | 最终去向        |
+| -------------- | ----------------- | -------- | --------------- |
+| 通过id删除订单 | /order/{order_id} | DELETE   | order/list.html |
+| 显示所有订单   | /orders           | POST     | order/list.html |
 
-## 前端商城API接口
+### 前端商城API接口
 
 登录
 
@@ -105,17 +110,15 @@
 | ---- | ------------ | -------- | --------------------------------------- |
 | 登出 | /user/logout | POST     | 设置cookie里面的Authorization为null即可 |
 
-
-
 商品
 
-| 作用                       | 请求URL            | 请求方式 | 最终去向     |
+| 作用                       | 请求URL            | 请求方式 | 请求参数     |
 | -------------------------- | ------------------ | -------- | ------------ |
 | 添加商品                   | /publishGood       | POST     | goods        |
-| 修改商品信息               | /good              | PUT      | goods        |
+| 修改商品信息               | /good              | PUT      | Goods        |
 | 通过ID删除商品             | /goodDeleteById    | POST     | id           |
 | 通过ID查询商品             | /goodsId           | GET      | id           |
-| 根据Name，模糊查询         | /goodsName         | GET      |              |
+| 根据Name，模糊查询         | /goodsName         | GET      | goods_name   |
 | 返回所有商品的信息         | /goodsList         | GET      |              |
 | 用户账号搜索用户发布的商品 | /goodByUserAccount | GET      | user_account |
 | 显示所有标签               | /showAllTag        | GET      |              |
@@ -131,6 +134,62 @@
 | 通过ID查找评论      | /discusssId        | GET      | discuss_id   |
 | 通过GoodsId找评论   | /discussByGoodsId  | GET      | goods_id     |
 | 通过用户的Account查 | /discussByAccount  | GET      | user_account |
+
+订单
+
+| 创建订单            | /createOrder         | POST     | Order        |
+| ------------------- | -------------------- | -------- | ------------ |
+| 通过用户账号找订单  | /getOrderByAccount   | GET      | discuss      |
+| 作用                | 请求URL              | 请求方式 | 请求参数     |
+| 通过ID删除评论      | /saveOne             | POST     | discuss_id   |
+| 通过ID找订单        | /orderById           | GET      | order_id     |
+| 通过GoodsId找评论   | /findAllGoodsOfOrder | GET      | goods_id     |
+| 通过用户的Account查 | /discussByAccount    | GET      | user_account |
+
+
+
+文件上传
+
+| 作用               | 请求URL  | 请求方式 | 返回信息 |
+| ------------------ | -------- | -------- | -------- |
+| 创建订单           | /mUpload | POST     | path     |
+| 通过用户账号找订单 | /dUpload | GET      | path     |
+
+用户
+
+
+
+| 作用                   | 请求URL                | 请求方式 | 返回信息   |
+| ---------------------- | ---------------------- | -------- | ---------- |
+| 创建订单               | 请求URL                | POST     | Order      |
+| 通过用户账号找用户信息 | /getUserInfo/{account} | GET      | discuss    |
+| 上传图片               | /changeImage           | GET      | path       |
+| 通过ID删除评论         | /updateInfo            | POST     | discuss_id |
+
+
+
+标签
+
+
+
+| 作用                 | 请求URL     | 请求方式 | 返回信息 |
+| -------------------- | ----------- | -------- | -------- |
+| 查询所有标签         | /showAllTag | GET      | Order    |
+| 通过标签查询商品信息 | /goodsByTag | GET      | Goods    |
+
+
+
+阿里支付
+
+
+| 作用                   | 请求URL      | 请求方式 | 返回信息 |
+| ---------------------- | ------------ | -------- | -------- |
+| 创建订单               | /getPagePay  | POST     |          |
+| 通过用户账号找用户信息 | /aliPayQuery | POST     | discuss  |
+| 退款查询               | /refundQuery | GET      | path     |
+| 关闭交易               | /alipayclose | POST     |          |
+| 异步通知               | /notify      | GET      | String   |
+
 
 
 
