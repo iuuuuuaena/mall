@@ -5,9 +5,10 @@
 
 * 前端商城页面 vue.js + vue/cli + elementUI
 
-### 项目预览(未完成)
+### 项目预览
 
 [后台管理界面](http://admin.jxdgogogo.xyz:8080)
+
 [前端商城页面](http://mall.jxdgogogo.xyz)
 
 ### 版本迭代
