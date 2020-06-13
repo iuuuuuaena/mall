@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-
+<div>
+<form name="punchout_form" method="post"
+      action="https://openapi.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=ZqvZmHjbJ8qrGH8x3VOU3TuLOcrvs4ifSv6a8PiAuzVZQBwDcEAuXnB%2F%2B%2BBWVDzz68JWxIz0RzeyDXBGAN9LKyigwRGkG8qA7Rqew0Nsj9U5Lzkx%2FMBjQg0lWIsfrLvEOpop%2FffsrDr3R73Dqqum6VcG1oaca5HZGB0Rn6SHktvcujhxVCZuLtVevaPLlfVySD5ENQ%2BfRvH6v90uDMBsHsG6w%2BFx6aHBrRFCm078Z%2B7HihoNptXmpNZBZd2%2B27iTCl%2F2kPSDf2GQl8DI7BX5P%2Bgel2425t9yc2iOhVnhT%2Bcrz0KHb5SONaFEFaYO5HymRk69CmNRyM7BhcGBcaXrpQ%3D%3D&notify_url=http%3A%2F%2Flocalhost%3A8080%2Fsuccess.html&version=1.0&app_id=2016102800774655&sign_type=RSA2&timestamp=2020-06-09+15%3A29%3A51&alipay_sdk=alipay-sdk-java-3.7.110.ALL&format=json">
+    <input type="hidden" name="biz_content" value="{&quot;out_trade_no&quot;:&quot;202006091518132890001&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;,&quot;subject&quot;:&quot;臭豆腐、老干妈&quot;,&quot;total_amount&quot;:&quot;5556&quot;}">
+    <input type="submit" value="立即支付" style="display:none" >
+</form>
+<script>
+    document.forms[0].submit();
+</script>
+</div>
 </body>
 </html>

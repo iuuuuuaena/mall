@@ -1,6 +1,6 @@
 package com.tapd.serviceimpl;
 
-import com.tapd.entities.Employee;
+import com.tapd.POJO.Employee;
 
 import com.tapd.mapper.EmployeeMapper;
 import com.tapd.service.EmployeeService;

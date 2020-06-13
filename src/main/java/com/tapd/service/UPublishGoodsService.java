@@ -1,7 +1,7 @@
 package com.tapd.service;
 
 
-import com.tapd.entities.Goods;
+import com.tapd.POJO.Goods;
 
 import java.util.List;
 

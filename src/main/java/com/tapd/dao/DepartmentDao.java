@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.tapd.entities.Department;
+import com.tapd.POJO.Department;
 import org.springframework.stereotype.Repository;
 
 

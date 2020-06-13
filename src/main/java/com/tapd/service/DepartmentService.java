@@ -1,6 +1,6 @@
 package com.tapd.service;
 
-import com.tapd.entities.Department;
+import com.tapd.POJO.Department;
 
 /**
  * @Author jxd

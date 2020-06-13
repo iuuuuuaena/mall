@@ -20,3 +20,5 @@
 2020-06-07 12:24:46.887  INFO 22059 --- [http-nio-8080-exec-10] com.tapd.serviceimpl.EmailServiceImpl    : 邮件发送成功
 2020-06-07 12:24:46.889  INFO 22059 --- [http-nio-8080-exec-10] com.tapd.controller.RegisterController   : code:为338279
 2020-06-07 12:31:29.275  WARN 22059 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-06-07 15:50:47.894  INFO 22059 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-07 15:50:47.919  WARN 22059 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'druid' threw an exception: java.lang.NoClassDefFoundError: com/alibaba/druid/pool/DruidDataSource$2

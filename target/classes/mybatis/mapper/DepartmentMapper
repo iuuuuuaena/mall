@@ -5,7 +5,7 @@
 <mapper namespace="com.tapd.mapper.DepartmentMapper">
 
 <!--@Select("select * from department where id = #{id}")-->
-<select id="findById" resultType="com.tapd.entities.Department">
+<select id="findById" resultType="com.tapd.POJO.Department">
         SELECT * FROM department WHERE id = #{id};
     </select>
 

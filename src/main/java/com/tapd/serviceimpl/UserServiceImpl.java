@@ -1,7 +1,7 @@
 package com.tapd.serviceimpl;
 
-import com.tapd.entities.User;
-import com.tapd.entities.UserLoginStatus;
+import com.tapd.POJO.User;
+import com.tapd.POJO.UserLoginStatus;
 import com.tapd.mapper.UserMapper;
 import com.tapd.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -94,5 +94,21 @@ public class UserServiceImpl implements UserService {
         List<User> userByEmail = userMapper.findUserByEmail(email);
         if (userByEmail.size() == 0) return false;
         else return true;
+    }
+
+    /**
+     * 更新照片
+     * @param user_account
+     * @param new_image
+     * @return
+     */
+    @Override
+    public int updateImage(String user_account, String new_image) {
+        return userMapper.updateImage(user_account,new_image);
+    }
+
+    @Override
+    public int update2(User user) {
+        return userMapper.update2(user);
     }
 }

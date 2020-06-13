@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>员工删除</title>
+		<title>员工管理</title>
 		<!-- Bootstrap core CSS -->
 		<link href="/asserts/css/bootstrap.min.css"  th:src="@{/webjars/bootstrap/4.0.0/css/bootstrap.css}"rel="stylesheet">
 
@@ -67,30 +67,30 @@
 							<input type="hidden" name="manager_id"  th:if="${manager!=null}" th:value="${manager.getManager_id()}">
 							<div class="form-group">
 								<label>nickname</label>
-								<input  name = "manager_nickname" type="text" th:value="${manager!=null}?${manager.manager_nickname}" class="form-control" placeholder="zhangsan" >
+								<input  name = "manager_nickname" type="text" th:value="${manager!=null}?${manager.getManager_nickname()}" class="form-control" placeholder="填写添加的员工昵称" >
 							</div>
 							<p style="color:red"  th:text = "${msg}" th:if="${not #strings.isEmpty(msg)}">
 							<div class="form-group">
 								<label>account</label>
-								<input name ="manager_account" type="text" class="form-control" th:value="${manager!=null}?${manager.manager_account}" placeholder="jxdgogogo@qq.com">
+								<input name ="manager_account" type="text" class="form-control" th:value="${manager!=null}?${manager.getManager_account()}" placeholder="填写自定义的员工账号，不超过16位（必填）">
 							</div>
 							<div class="form-group">
 								<label>password</label>
-								<input name ="manager_password" type="text" class="form-control" th:value="${manager!=null}?${manager.manager_password}" placeholder="jxdgogogo@qq.com">
+								<input name ="manager_password" type="text" class="form-control" th:value="${manager!=null}?${manager.getManager_password()}" placeholder="填写登录密码（必填）">
 							</div>
 							<div class="form-group">
 								<label>图片上传</label>
-								<img id ="iiii" th:src="${manager!=null}?${manager.manager_icon}" >
+								<img id ="iiii" th:src="${manager!=null}?${manager.getManager_icon()}" >
 								<!--这个是上传图片的，-->
 								<input name ="file" form="form2" type="file" class="form-control" >
 								<input class="btn btn-sm btn-success" form ="form2" id ="fileBtn" value="上传" type="button"  onclick="uploadImg()" >
 								<!--这个是隐藏的-->
-								<input id="icon" name ="manager_icon"   type="hidden" class="form-control" th:value="${manager!=null}?${manager.manager_icon}">
+								<input id="icon" name ="manager_icon"   type="hidden" class="form-control" th:value="${manager!=null}?${manager.getManager_icon()}">
 
 							</div>
 							<div class="form-group">
 								<label>allDealAmount</label>
-								<input name ="all_deal_amount" type="text" class="form-control" th:value="${manager!=null}?${manager.all_deal_amount}" placeholder="jxdgogogo@qq.com">
+								<input name ="all_deal_amount" type="text" class="form-control" th:value="${manager!=null}?${manager.getAll_deal_amount()}" placeholder="所有交易的金额">
 							</div>
 
 
@@ -160,12 +160,12 @@
 					cache : false,
 					type : "post",
 					data : formData,
-					url : 'http://localhost:8080/mUpload',
+					url : 'http://admin.jxdgogogo.xyz:8080/mUpload',
 					dataType : 'json',
 					contentType: false, //必须
 					processData: false, //必须
 					success : function(data) {
-						console.log("上传文件成功:"+data)
+						console.log("上传文件成功!")
 						$("#iiii").attr("src", '/asserts'+data.path)
 						$("#icon").attr("value",'/asserts'+data.path)
 						alert("头像上传成功")

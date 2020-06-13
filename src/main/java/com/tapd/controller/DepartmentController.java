@@ -1,14 +1,12 @@
 package com.tapd.controller;
 
-import com.tapd.entities.Department;
-import com.tapd.mapper.DepartmentMapper;
+import com.tapd.POJO.Department;
 import com.tapd.serviceimpl.DepartmentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @Author jxd

@@ -64,40 +64,40 @@
 							<!--我们只需要使用一个inpu框，然后类型是hidden-->
 
 							<input type="hidden" name="_method" value="put" th:if="${user!=null}">
-							<input type="hidden" name="user_id"  th:if="${user!=null}" th:value="${user.user_id}">
+							<input type="hidden" name="user_id"  th:if="${user!=null}" th:value="${user.getUser_id()}">
 							<div class="form-group">
 								<label>昵称</label>
-								<input   name = "user_nickname"type="text" th:value="${user!=null}?${user.user_nickname}" class="form-control" placeholder="张三" >
+								<input   name = "user_nickname"type="text" th:value="${user!=null}?${user.getUser_nickname()}" class="form-control" placeholder="填写昵称信息（必填）" >
 							</div>
 							<div class="form-group">
 								<p style="color: red"  th:text = "${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
 								<label>账号</label>
-								<input  name ="user_account" type="text" class="form-control" th:value="${user!=null}?${user.user_account}" placeholder="abcdefg">
+								<input  name ="user_account" type="text" class="form-control" th:value="${user!=null}?${user.getUser_account()}" placeholder="填写账号信息 （必填）">
 							</div>
 
 							<div class="form-group">
 								<label>密码</label>
-								<input   name ="user_password" type="password" class="form-control" th:value="${user!=null}?${user.user_password}" placeholder="**********">
+								<input   name ="user_password" type="password" class="form-control" th:value="${user!=null}?${user.getUser_password()}" placeholder="填写自定义密码（必填）">
 							</div>
 							<div class="form-group">
 								<label>年龄</label>
-								<input   name ="user_age" type="text" class="form-control" th:value="${user!=null}?${user.user_age}" placeholder="22">
+								<input   name ="user_age" type="text" class="form-control" th:value="${user!=null}?${user.getUser_age()}" placeholder="18">
 							</div>
 
 							<div class="form-group">
 								<label>性别</label><br/>
 								<div class="form-check form-check-inline">
-									<input type="radio" name = "user_gender" class="form-check-input" th:checked="${user!=null}?${user.user_gender==1}"   value="1">
+									<input type="radio" name = "user_gender" class="form-check-input" th:checked="${user!=null}?${user.getUser_gender()==1}"   value="1">
 									<label class="form-check-label">男</label>
 								</div>
 								<div class="form-check form-check-inline">
-									<input   type="radio" name = "user_gender" class="form-check-input" th:checked="${user!=null}?${user.user_gender==0}"   value="0">
+									<input   type="radio" name = "user_gender" class="form-check-input" th:checked="${user!=null}?${user.getUser_gender()==0}"   value="0">
 									<label  class="form-check-label">女</label>
 								</div>
 							</div>
 							<div class="form-group">
 								<label>爱好</label>
-								<input name ="user_hobby" type="text" class="form-control" th:value="${user!=null}?${user.user_hobby}" placeholder="zhangsan@atguigu.com">
+								<input name ="user_hobby" type="text" class="form-control" th:value="${user!=null}?${user.getUser_hobby()}" placeholder="打篮球">
 							</div>
 
 							<div class="form-group">
@@ -108,23 +108,23 @@
 								<input name ="file" form="form2" type="file" class="form-control" >
 								<input class="btn btn-sm btn-success" form ="form2" id ="fileBtn" value="上传" type="button"  onclick="uploadImg()" >
 								<!--这个是隐藏的-->
-								<input id="icon" name ="user_icon"   type="hidden" class="form-control" th:value="${user!=null}?${user.user_icon}" placeholder="null">
+								<input id="icon" name ="user_icon"   type="hidden" class="form-control" th:value="${user!=null}?${user.getUser_icon()}" placeholder="null">
 							</div>
 							<div class="form-group">
 								<label>QQ</label>
-								<input   name ="user_qq" type="text" class="form-control" th:value="${user!=null}?${user.user_qq}" placeholder="2291146413">
+								<input   name ="user_qq" type="text" class="form-control" th:value="${user!=null}?${user.getUser_qq()}" placeholder="填写您的qq号（可选）">
 							</div>
 							<div class="form-group">
 								<label>银行卡</label>
-								<input   name ="user_card" type="text" class="form-control" th:value="${user!=null}?${user.user_card}" placeholder="xxxxxxxxxxxxx3456">
+								<input   name ="user_card" type="text" class="form-control" th:value="${user!=null}?${user.getUser_card()}" placeholder="银行卡信息（可选）">
 							</div>
 							<div class="form-group">
 								<label>Email</label>
-								<input   name ="user_email" type="text" class="form-control" th:value="${user!=null}?${user.user_email}" placeholder="zhangsan@atguigu.com">
+								<input   name ="user_email" type="text" class="form-control" th:value="${user!=null}?${user.getUser_email()}" placeholder="邮箱信息（必填）">
 							</div>
 							<div class="form-group">
 								<label>交易总金额</label>
-								<input   name ="all_deal_amount" type="text" class="form-control" th:value="${user!=null}?${user.all_deal_amount}" placeholder="0.0">
+								<input   name ="all_deal_amount" type="text" class="form-control" th:value="${user!=null}?${user.getAll_deal_amount()}" placeholder="0">
 							</div>
 							<button type="submit" class="btn btn-primary"  th:text="${user!=null}?'修改':'添加'" >添加</button>
 						</form>
@@ -193,12 +193,12 @@
 					cache : false,
 					type : "post",
 					data : formData,
-					url : 'http://localhost:8080/mUpload',
+					url : 'http://admin.jxdgogogo.xyz:8080/mUpload',
 					dataType : 'json',
 					contentType: false, //必须
 					processData: false, //必须
 					success : function(data) {
-						console.log("上传文件成功:"+data)
+						console.log("上传文件成功!")
 						$("#iiii").attr("src", '/asserts'+data.path)
 						$("#icon").attr("value",'/asserts'+data.path)
 						alert("success: "+data)

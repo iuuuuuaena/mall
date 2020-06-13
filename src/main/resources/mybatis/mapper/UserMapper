@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tapd.mapper.UserMapper">
     <!--@Select("select * from user_info_table where user_id = #{id}")-->
-    <select id="findById" resultType="com.tapd.entities.User">
+    <select id="findById" resultType="com.tapd.POJO.User">
         SELECT * FROM user_info_table WHERE user_id = #{id}
     </select>
 

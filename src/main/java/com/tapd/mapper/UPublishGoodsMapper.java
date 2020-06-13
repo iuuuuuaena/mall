@@ -1,6 +1,6 @@
 package com.tapd.mapper;
 
-import com.tapd.entities.Goods;
+import com.tapd.POJO.Goods;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -44,9 +44,9 @@ public interface UPublishGoodsMapper {
 
 
     // 回的是插入的条数，也就是插入的商品数量，一般就是一个，批量插入就是多个了
-    @Insert("insert into user_publish_goods_table (user_nickname,user_account,goods_name,goods_amount,goods_image,goods_info,goods_tag,is_deal)" +
+    @Insert("insert into user_publish_goods_table (user_nickname,user_account,goods_name,goods_price,goods_image,goods_info,goods_tag,is_deal)" +
             "values " +
-            "(#{user_nickname},#{user_account},#{goods_name},#{goods_amount},#{goods_image},#{goods_info},#{goods_tag},#{is_deal})")
+            "(#{user_nickname},#{user_account},#{goods_name},#{goods_price},#{goods_image},#{goods_info},#{goods_tag},#{is_deal})")
     int insert(Goods goods);
 
 
@@ -96,15 +96,18 @@ public interface UPublishGoodsMapper {
      */
     @Update(" UPDATE user_publish_goods_table" +
             "        SET user_nickname = #{user_nickname}," +
-            "            user_account = #{user_account}," +
-            "            goods_id = #{goods_id}," +
+            "            user_account = #{user_account},"+
             "            goods_name = #{goods_name}," +
-            "            goods_account = #{goods_account}," +
+            "            goods_price = #{goods_price}," +
             "            goods_image = #{goods_image}," +
             "            goods_info = #{goods_info}," +
             "            goods_tag = #{goods_tag}," +
             "            is_deal = #{is_deal}" +
             "        WHERE goods_id = #{goods_id}")
-    public int update(Goods goods);
+    int update(Goods goods);
+
+
+
+
 
 }

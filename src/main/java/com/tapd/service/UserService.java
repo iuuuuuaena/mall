@@ -1,12 +1,7 @@
 package com.tapd.service;
 
-import com.tapd.entities.User;
-import com.tapd.entities.UserLoginStatus;
-import com.tapd.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
+import com.tapd.POJO.User;
+import com.tapd.POJO.UserLoginStatus;
 
 /**
  * @Author jxd
@@ -16,8 +11,14 @@ import java.util.List;
 
 public interface UserService extends BaseService<User> {
 
-    public UserLoginStatus loginStatusKeep(User user,String password); // 用户登录状态保持
-    public boolean isUserExist(String email); // 检查邮箱是否存在
+    UserLoginStatus loginStatusKeep(User user,String password); // 用户登录状态保持
+    boolean isUserExist(String email); // 检查邮箱是否存在
+
+    int updateImage(String user_account,String new_image);
+
+    int update2(User user);
+
+
 
 }
 

@@ -1,6 +1,6 @@
 package com.tapd.controller;
 
-import com.tapd.entities.UserLoginStatus;
+import com.tapd.POJO.UserLoginStatus;
 import com.tapd.enums.ResponseStatus;
 import com.tapd.utils.CookieUtil;
 import com.tapd.utils.ResultUtils;
@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -35,11 +34,11 @@ public class LogoutController  extends BaseController{
      * @param session
      * @return
      */
-    @RequestMapping("/mall/logout")
+    @GetMapping("/mall/logout")
     public String logoutManagementBackground(HttpSession session) {
         // 让session立即失效
         session.invalidate();
-        return "redirect:login";
+        return "redirect:/";
     }
 
     //--------------------------------前端商城------------------------------------
@@ -59,12 +58,12 @@ public class LogoutController  extends BaseController{
         System.out.println("用户正在注销");
         if (userLoginStatus == null) {
             // 如果已经注销了，就返回已经注销
-            return ResultUtils.fail(ResponseStatus.HAS_LOGOUT);
+            return ResultUtils.fail(ResponseStatus.HAS_LOGOUT.getCode(),ResponseStatus.HAS_LOGOUT.getMsg(),ResponseStatus.HAS_LOGOUT);
         }
         System.out.println("当用户登录状态是"+userLoginStatus);
         // 如果没有注销，就设置cookie的属性Authorization 为null，即登录状态注销
         CookieUtil.setCookie(response, "Authorization", null);
         // 返回注销成功
-        return ResultUtils.ok(ResponseStatus.SUCCESS_LOGOUT);
+        return ResultUtils.ok(ResponseStatus.SUCCESS_LOGOUT.getCode(),ResponseStatus.SUCCESS_LOGOUT.getMsg(),ResponseStatus.SUCCESS_LOGOUT);
     }
 }

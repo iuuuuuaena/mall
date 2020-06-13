@@ -1,6 +1,6 @@
 package com.tapd.mapper;
 
-import com.tapd.entities.Discuss;
+import com.tapd.POJO.Discuss;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

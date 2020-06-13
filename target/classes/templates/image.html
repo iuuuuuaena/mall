@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>轮播图图片添加</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/asserts/css/bootstrap.min.css" th:src="@{/webjars/bootstrap/4.0.0/css/bootstrap.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/asserts/css/dashboard.css" th:src="@{/asserts/css/dashboard.css}" rel="stylesheet">
+    <style type="text/css">
+        /* Chart.js */
+
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+
+        table tr td image {
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+
+<!--引入被抽取的navbar-->
+
+<div th:replace="~{commons/bar::topbar}"></div>
+<div class="container-fluid">
+    <div class="row">
+
+        <div th:replace="commons/bar::#leftcontent(activeUri='image')"></div>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+            <label>图片上传</label>
+
+            <form id="form2" method="post" enctype="multipart/form-data">
+
+            </form>
+            <form id="form4" method="post" enctype="multipart/form-data">
+
+            </form>
+
+            <form id="form6" method="post" enctype="multipart/form-data">
+
+            </form>
+
+
+            <table class="table table-hover">
+                <tr th:each="image:${images}">
+                    <td th:text="${image.getId()}"></td>
+                    <td><img id="iiii" th:src="${image.getPath()}"/></td>
+                </tr>
+            </table>
+
+            <!--<img  th:src="${images!=null}?${images.}" >-->
+            <!--这个是上传图片的，-->
+            <input name="file" form="form2" type="file" class="form-control">
+            <input class="btn btn-sm btn-success" form="form2" id="fileBtn1" value="上传" type="button"
+                   onclick="uploadImg1()">
+
+            <label> 上传第一张</label>
+            <!--这个是隐藏的-->
+            <form th:action="@{/update1}" method="post" id="form1">
+                <input type="hidden" name="_method" value="put">
+                <input id="icon1" name="path" type="hidden" class="form-control" placeholder="null">
+                <button type="submit" class="btn btn-primary"  >修改</button>
+
+            </form>
+            <label> 上传第二张</label>
+
+            <input name="file" form="form4" type="file" class="form-control">
+            <input class="btn btn-sm btn-success" form="form4" id="fileBtn2" value="上传" type="button"
+                   onclick="uploadImg2()">
+
+            <!--这个是隐藏的-->
+            <form th:action="@{/update2}" method="post" id="form3">
+                <input type="hidden" name="_method" value="put">
+                <input id="icon2" name="path" type="hidden" class="form-control" placeholder="null">
+                <button type="submit" class="btn btn-primary"  >修改</button>
+
+            </form>
+            <label> 上传第三张</label>
+
+            <input name="file" form="form6" type="file" class="form-control">
+            <input class="btn btn-sm btn-success" form="form6" id="fileBtn3" value="上传" type="button"
+                   onclick="uploadImg3()">
+
+
+            <!--这个是隐藏的-->
+            <form th:action="@{/update3}" method="post" id="form5">
+                <input type="hidden" name="_method" value="put">
+                <input id="icon3" name="path" type="hidden" class="form-control" placeholder="null">
+                <button type="submit" class="btn btn-primary" >修改</button>
+
+            </form>
+        </main>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js"
+        th:src="@{/webjars/jquery/3.5.1/dist/jquery.js}"></script>
+<script type="text/javascript" src="asserts/js/popper.min.js"
+        th:src="@{/webjars/popper.js/1.11.1/dist/popper.js}"></script>
+<script type="text/javascript" src="asserts/js/bootstrap.min.js"
+        th:src="@{/webjars/bootstrap/4.0.4/js/bootstrap.js}"></script>
+
+<!-- Icons -->
+<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
+<script>
+    feather.replace()
+</script>
+
+<!-- Graphs -->
+<script type="text/javascript" src="asserts/js/Chart.min.js"></script>
+
+
+<script>
+
+    function uploadImg1() {
+        var formData = new FormData($("#form2")[0]);
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "post",
+            data: formData,
+            url: 'http://admin.jxdgogogo.xyz:8080/mUpload',
+            dataType: 'json',
+            contentType: false, //必须
+            processData: false, //必须
+            success: function (data) {
+                console.log("上传文件成功:" + data)
+                // $("#iiii").attr("src", '/asserts' + data.path)
+                $("#icon1").attr("value", '/asserts' + data.path)
+                alert("success: ")
+            },
+            error: function (arg1, arg2, arg3) {
+                console.log(arg1 + "--" + arg2 + "--" + arg3);
+            }
+
+        });
+    }
+
+    function uploadImg2() {
+        var formData = new FormData($("#form4")[0]);
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "post",
+            data: formData,
+            url: 'http://admin.jxdgogogo.xyz:8080/mUpload',
+            dataType: 'json',
+            contentType: false, //必须
+            processData: false, //必须
+            success: function (data) {
+                console.log("上传文件成功:" + data)
+                // $("#iiii").attr("src", '/asserts' + data.path)
+                $("#icon2").attr("value", '/asserts' + data.path)
+                alert("success: " )
+            },
+            error: function (arg1, arg2, arg3) {
+                console.log(arg1 + "--" + arg2 + "--" + arg3);
+            }
+
+        });
+    }
+
+    function uploadImg3() {
+        var formData = new FormData($("#form6")[0]);
+        $.ajax({
+            async: false,
+            cache: false,
+            type: "post",
+            data: formData,
+            url: 'http://admin.jxdgogogo.xyz:8080/mUpload',
+            dataType: 'json',
+            contentType: false, //必须
+            processData: false, //必须
+            success: function (data) {
+                console.log("上传文件成功:" )
+                // $("#iiii").attr("src", '/asserts' + data.path)
+                $("#icon3").attr("value", '/asserts' + data.path)
+                alert("success: " + data)
+            },
+            error: function (arg1, arg2, arg3) {
+                console.log(arg1 + "--" + arg2 + "--" + arg3);
+            }
+
+        });
+    }
+
+</script>
+</body>
+</html>

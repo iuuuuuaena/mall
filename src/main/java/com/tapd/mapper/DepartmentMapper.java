@@ -1,7 +1,6 @@
 package com.tapd.mapper;
 
-import com.tapd.entities.Department;
-import org.apache.ibatis.annotations.Insert;
+import com.tapd.POJO.Department;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

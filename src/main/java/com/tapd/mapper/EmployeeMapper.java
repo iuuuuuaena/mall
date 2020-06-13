@@ -1,6 +1,6 @@
 package com.tapd.mapper;
 
-import com.tapd.entities.Employee;
+import com.tapd.POJO.Employee;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

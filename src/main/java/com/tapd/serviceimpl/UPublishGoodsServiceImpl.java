@@ -1,6 +1,6 @@
 package com.tapd.serviceimpl;
 
-import com.tapd.entities.Goods;
+import com.tapd.POJO.Goods;
 import com.tapd.mapper.UPublishGoodsMapper;
 import com.tapd.service.UPublishGoodsService;
 import org.springframework.beans.factory.annotation.Autowired;

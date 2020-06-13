@@ -49,7 +49,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/login").permitAll()
                 .antMatchers("/register").permitAll()
                 .antMatchers("/user/**").hasRole("employee")
-                .antMatchers("/manager/**").hasRole("manager");
+                .antMatchers("/manager/**").hasRole("manager")
+                .antMatchers("/good/**").hasRole("employee")
+                .antMatchers("/orders").hasRole("employee")
+                .antMatchers("/order").hasRole("employee");
+
 
         // 没有权限就转发到登录界面
         http.formLogin();

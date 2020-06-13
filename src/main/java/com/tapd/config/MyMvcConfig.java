@@ -36,7 +36,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
 
         // 视图映射，把/hello请求映射到index，浏览器访问hello，会映射到到index
         registry.addViewController("/index").setViewName("login.html");
-        registry.addViewController("/log").setViewName("login.html");
+        registry.addViewController("/mall/login").setViewName("login.html");
         registry.addViewController("/register").setViewName("register.html");
     }
 
@@ -50,7 +50,10 @@ public class MyMvcConfig implements WebMvcConfigurer {
                         "/discussByAccount", "/discussByGoodsId", "/discussCreate", "/discussDelete", "/discussUpdate",
                         "/upload", "/mUpload", "/mall/**", "/index", "/index.html", "/main.html", "/img/**", "/goods",
                         "/good/**", "/publishGood", "/goodsList", "/goodsId", "/goodDeleteById", "/goodsName",
-                        "/Room/**","/goodByUserAccount","/showAllTag","/GoodsByTag");
+                        "/Room/**","/goodByUserAccount","/showAllTag","/goodsByTag","/register.html","/createOrder",
+                        "/getPagePay","/notify","/aliPayQuery","/success.html","/getUserInfo","/getOrderByAccont","/orders",
+                        "/orderById", "/saveOne","/ready","/aliPayRefund","/refundQuery","/getAllImage","/update3","/update2","/update1",
+                        "/image");
     }
 
     @Bean
@@ -64,6 +67,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
                 registry.addViewController("/index.html").setViewName("login");
                 registry.addViewController("/main.html").setViewName("dashboard"); // 把main.html映射到dashboard页面
                 registry.addViewController("/register").setViewName("register");
+                registry.addViewController("/register.html").setViewName("register");
             }
         };
         return adapter;

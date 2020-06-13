@@ -1,10 +1,9 @@
 package com.tapd.controller;
 
-import com.tapd.entities.Discuss;
+import com.tapd.POJO.Discuss;
 import com.tapd.enums.ResponseStatus;
 import com.tapd.serviceimpl.DiscussServiceImpl;
 import com.tapd.utils.ResultUtils;
-import jdk.nashorn.internal.objects.annotations.Getter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.transform.Result;
-import java.util.Collections;
 import java.util.List;
 
 /**

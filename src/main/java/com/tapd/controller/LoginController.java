@@ -1,13 +1,11 @@
 package com.tapd.controller;
 
-import com.sun.mail.pop3.POP3SSLStore;
-import com.tapd.entities.Employee;
-import com.tapd.entities.User;
-import com.tapd.entities.UserLoginStatus;
+import com.tapd.POJO.Employee;
+import com.tapd.POJO.User;
+import com.tapd.POJO.UserLoginStatus;
 import com.tapd.enums.ResponseStatus;
 import com.tapd.service.EmployeeService;
 import com.tapd.service.UserService;
-import com.tapd.serviceimpl.EmployeeServiceImpl;
 import com.tapd.utils.CookieUtil;
 import com.tapd.utils.JwtTokenUtils;
 import com.tapd.utils.ResultUtils;
@@ -98,7 +96,7 @@ public class LoginController {
     @GetMapping("/u/login")
     public Object mailLogin(@RequestParam("username") String username,
                             @RequestParam("password") String password,
-                            @RequestParam("isloginkeeping") Boolean isKeeping,
+                            @RequestParam("isloginkeeping") String isKeeping,
                             Map<String, String> map,
                             HttpServletResponse response, HttpServletRequest request) {
 
@@ -110,7 +108,10 @@ public class LoginController {
             System.out.println("密码是：" +  password);
             System.out.println("保留状态是：" +isKeeping);
 
-        User user = null;
+
+        System.out.println(ResponseStatus.NO_LOGIN);
+        System.out.println(ResponseStatus.NO_DISCUSS);
+        User user ;
         try {
             // 通过account寻找用户
             user = userService.findByAccount(username);
@@ -120,51 +121,54 @@ public class LoginController {
             // 如果报错，说明没找到用户
             logger.error("用户登录失败,错误信息:" + e);
             System.out.println("用户登录失败,错误信息:" + e);
-            return ResultUtils.fail(ResponseStatus.NO_USER_OR_ACCOUNT_ERROR);
+            return ResultUtils.fail(ResponseStatus.NO_USER_OR_ACCOUNT_ERROR.getCode(),ResponseStatus.NO_USER_OR_ACCOUNT_ERROR.getMsg(),ResponseStatus.NO_USER_OR_ACCOUNT_ERROR);
         }
 
         // 如果用户选择了保存登录状态的话！！！1
-        if (isKeeping.equals(true)) {
+        if (isKeeping.equals("true")) {
             // 给这个用户保存状态
             UserLoginStatus loginStatus = userService.loginStatusKeep(user, password);
             System.out.println("登录状态为"+loginStatus);
             // 如果登录状态为空，就说明用户账号密码错误
             if (loginStatus == null) {
-                return ResultUtils.fail(com.tapd.enums.ResponseStatus.USERNAME_PASS_ERROR);
+                return ResultUtils.fail(ResponseStatus.USERNAME_PASS_ERROR.getCode(),ResponseStatus.USERNAME_PASS_ERROR.getMsg(),ResponseStatus.USERNAME_PASS_ERROR);
             }
             String token = new JwtTokenUtils().generateToken(loginStatus);
             // 把token写回cookie
             CookieUtil.setCookie(response, "Authorization", token);
             map.put("token", token);
             // 返回 token
-            return ResultUtils.ok(map);
+            return  ResultUtils.ok(ResponseStatus.SUCCESS_LOGIN.getCode(),ResponseStatus.SUCCESS_LOGIN.getMsg(),ResponseStatus.SUCCESS_LOGIN);
         } else {
-            // 如果不保存登录的话，就不用jwt
-            return ResultUtils.ok(ResponseStatus.OK);
-
+            if (user.getUser_password().equals(password)){
+                // 如果不保存登录的话，就不用jwt
+                return ResultUtils.ok(ResponseStatus.SUCCESS_LOGIN.getCode(),ResponseStatus.SUCCESS_LOGIN.getMsg(),ResponseStatus.SUCCESS_LOGIN);
+            }else {
+                return ResultUtils.fail(ResponseStatus.USERNAME_PASS_ERROR.getCode(), ResponseStatus.USERNAME_PASS_ERROR.getMsg(), ResponseStatus.USERNAME_PASS_ERROR);
+            }
         }
     }
 
 
-    @ResponseBody
-    @PostMapping(value = "/u/login")
-    public String test(@RequestBody Map<String,String>map) {
-        System.out.println(map);
-        return "3";
-    }
-    @ResponseBody
-    @GetMapping(value = "/u")
-    public String test1() {
-        return "2";
-    }
-    @ResponseBody
-    @PostMapping(value = "/u3")
-    public String test2() {
-        return "1";
-    }
-    @ResponseBody
-    @PostMapping(value = "/u2")
-    public String test3() {
-        return "5";
-    }
+    // @ResponseBody
+    // @PostMapping(value = "/u/login")
+    // public String test(@RequestBody Map<String,String>map) {
+    //     System.out.println(map);
+    //     return "3";
+    // }
+    // @ResponseBody
+    // @GetMapping(value = "/u")
+    // public String test1() {
+    //     return "2";
+    // }
+    // @ResponseBody
+    // @PostMapping(value = "/u3")
+    // public String test2() {
+    //     return "1";
+    // }
+    // @ResponseBody
+    // @PostMapping(value = "/u2")
+    // public String test3() {
+    //     return "5";
+    // }
 }

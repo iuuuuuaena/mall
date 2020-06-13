@@ -1,6 +1,6 @@
 package com.tapd.service;
 
-import com.tapd.entities.Discuss;
+import com.tapd.POJO.Discuss;
 
 import java.util.List;
 

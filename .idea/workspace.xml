@@ -1,99 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28eb7b5d-eaf8-4647-9063-b240419b28b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alipay_sdk_alipay_sdk_java_3_7_110_ALL.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/config/AlipayConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/AlipayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/AlipayService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/AlipayServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error/5xx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tapd/config/AlipayConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/AlipayController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tapd/service/AlipayService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/AlipayServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/error/5xx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/1a850405-dc9b-4127-ab1c-1e28cab30c83.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/2609e468-4378-4d85-8f2b-1894db559a54.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/299768b4-9735-40a2-990d-bea82b45a63b.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/43b33beb-5e8b-430a-8b35-7c3849d6ecd5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/4d87c8dc-0af5-42b4-a7bb-87688b243e8c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/56edca45-5a87-4589-ae70-fc688f07ffcf.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/64c8ed74-0134-4cb2-8fd4-b2b8513070bc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/7271669f-0cac-41f0-b00d-3b10bddafc4d.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/7732e08d-e443-4e2f-bde6-f8dec59d05fe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/81dac196-0bf1-401b-a985-8dd197c6996d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/895ae283-296e-49a6-8e76-6b5778a1a8fe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/98c8f109-c420-4acc-8871-b59a815cd922.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/a103e79d-e115-43ec-9905-0eff268f42bb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/b2c1b291-eec4-4c04-8c6a-1d07639fea87.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/cea6d6b2-7d2f-4483-be94-7cda6f0d0e0d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/d0e6a0b4-0396-4a5b-a64c-69cb6596b1f9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/e3787771-95e1-4ef4-b910-339a879d13bf.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/my-management-img/e736dca3-c23c-4aa3-9128-a4ac9ec6ed51.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/springboot.log.2020-06-06.0.gz" afterDir="false" />
+    <list default="true" id="28eb7b5d-eaf8-4647-9063-b240419b28b8" name="Default Changelist" comment="1.0.0   管理后台上线&#10;--story=1005654  --user=iuuuuuaena">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/OrderGoods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/ReceiveInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/Refund.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/ShoppingAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/ImageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/ReceiveInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/ImageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/ReceiveInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/ImageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/ReceiveInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/ImageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/ReceiveInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tapd/utils/OrderNoUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/goods/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/image.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managementplatform2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/managementplatform2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot.log" beforeDir="false" afterPath="$PROJECT_DIR$/springboot.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot.log.2020-06-06.0.gz" beforeDir="false" afterPath="$PROJECT_DIR$/springboot.log.2020-06-06.0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot.log.2020-06-06.035125155734332.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot.log.2020-06-06.1.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot.log.2020-06-06.2.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/component/LoginHandlerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/component/LoginHandlerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/config/AlipayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/config/AliPayConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/config/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/config/DruidConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/config/MyMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/config/MyMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/config/MybatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/config/MybatisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/AlipayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/AliPayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/BaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/DepartmentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/DiscussController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/DiscussController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/FileUploadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/dao/BeanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/dao/BeanDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/dao/DepartmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/dao/DepartmentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/dao/EmployeeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/entities/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/entities/Discuss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/Discuss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/entities/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/Goods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/entities/GoodsTransactionRecording.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/entities/UserLoginStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/POJO/UserLoginStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/enums/ResponseStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/enums/ResponseStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/DepartmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/DepartmentMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/DiscussMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/DiscussMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/GoodsTransactionRecordingMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/GoodsTransactionRecordingMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/GoodsTransactionRecordingMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/OrderMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UPublishGoodsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UPublishGoodsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/service/AlipayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/AliPayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/DepartmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/service/DiscussService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/DiscussService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/service/GoodsTransactionRecordingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/service/UPublishGoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/UPublishGoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/service/UserLoginStatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/UserLoginStatusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/AlipayServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/AliPayServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/DepartmentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/DiscussServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/DiscussServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/GoodsTransactionRecordingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UPublishGoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UPublishGoodsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/utils/JwtTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/utils/JwtTokenUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tapd/utils/ResultUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tapd/utils/ResultUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/DepartmentMapper" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/DepartmentMapper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/commons/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/commons/bar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/discuss/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/discuss/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/3xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/3xx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/403.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/4xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/4xx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/5xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/5xx.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goods/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goods/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/component/LoginHandlerInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/component/LoginHandlerInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/config/AlipayConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/config/AlipayConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/config/DruidConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/config/DruidConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/config/MyMvcConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/config/MyMvcConfig$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/config/MyMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/config/MyMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/AlipayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/AlipayController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/DepartmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/DepartmentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/DiscussController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/DiscussController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/FileUploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/FileUploadController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/LogoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/LogoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/dao/BeanDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/dao/BeanDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/dao/DepartmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/dao/DepartmentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/dao/EmployeeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/entities/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/entities/Discuss.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/entities/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/entities/Goods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/entities/GoodsTransactionRecording.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/entities/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/entities/UserLoginStatus.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/enums/ResponseStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/enums/ResponseStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/mapper/DepartmentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/mapper/DepartmentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/mapper/DiscussMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/mapper/DiscussMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/mapper/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/mapper/EmployeeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/mapper/GoodsTransactionRecordingMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/mapper/UPublishGoodsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/mapper/UPublishGoodsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/service/AlipayService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/service/AlipayService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/service/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/service/DepartmentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/service/DiscussService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/service/DiscussService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/service/EmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/service/GoodsTransactionRecordingService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/service/UPublishGoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/service/UPublishGoodsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/AlipayServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/AlipayServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/DepartmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/DepartmentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/DiscussServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/DiscussServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/EmployeeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/GoodsTransactionRecordingServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/UPublishGoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/UPublishGoodsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/serviceimpl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/utils/JwtTokenUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/utils/JwtTokenUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tapd/utils/ResultUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tapd/utils/ResultUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/DepartmentMapper" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/DepartmentMapper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserMapper" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/UserMapper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/commons/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/commons/bar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/discuss/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/discuss/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/error/3xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/3xx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/403.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/error/4xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/4xx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/5xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/5xx.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/goods/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/goods/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/manager/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/manager/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/manager/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/manager/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/managementplatform-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/managementplatform-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/managementplatform-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/managementplatform-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/my-management-img/icon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/my-management-img/38751f26-47b6-434d-8ec1-5337c904c897.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/18eb7f45-74dd-49c8-b25d-5ba341e15b9e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/1a850405-dc9b-4127-ab1c-1e28cab30c83.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/2609e468-4378-4d85-8f2b-1894db559a54.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/299768b4-9735-40a2-990d-bea82b45a63b.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/37ee9e3e-1ac1-4c56-b55d-f7877b09abba.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/38751f26-47b6-434d-8ec1-5337c904c897.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/3914e408-a6e8-42f2-b822-aaaec46da0d1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/43b33beb-5e8b-430a-8b35-7c3849d6ecd5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/4d87c8dc-0af5-42b4-a7bb-87688b243e8c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/56edca45-5a87-4589-ae70-fc688f07ffcf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/64c8ed74-0134-4cb2-8fd4-b2b8513070bc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/7271669f-0cac-41f0-b00d-3b10bddafc4d.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/7732e08d-e443-4e2f-bde6-f8dec59d05fe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/81dac196-0bf1-401b-a985-8dd197c6996d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/895ae283-296e-49a6-8e76-6b5778a1a8fe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/98c8f109-c420-4acc-8871-b59a815cd922.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/99bb40ce-c957-4205-a913-ac8a2c8a41ef.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/a103e79d-e115-43ec-9905-0eff268f42bb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/b2c1b291-eec4-4c04-8c6a-1d07639fea87.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/cea6d6b2-7d2f-4483-be94-7cda6f0d0e0d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/d0e6a0b4-0396-4a5b-a64c-69cb6596b1f9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/e3787771-95e1-4ef4-b910-339a879d13bf.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/my-management-img/e736dca3-c23c-4aa3-9128-a4ac9ec6ed51.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/springboot.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/springboot.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.tapd.ManagementplatformApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.tapd.ManagementplatformApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.tapd.ManagementplatformApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.tapd.ManagementplatformApplicationTests.txt" afterDir="false" />
@@ -133,10 +222,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/DiscussController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/enums/ResponseStatus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1838">
-              <caret line="132" column="14" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
+            <state relative-caret-position="245">
+              <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/AliPayController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -144,8 +242,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/BaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            <state relative-caret-position="630">
+              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/config/AliPayConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/ReceiveInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="882">
+              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,79 +270,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/DepartmentController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/RegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="566">
+              <caret line="150" column="15" lean-forward="true" selection-start-line="150" selection-start-column="15" selection-end-line="150" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/ImageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/enums/ResponseStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="76" column="21" lean-forward="true" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UPublishGoodsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="555">
+              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="162">
-                <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="172" column="19" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/LogoutController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="40" column="8" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="53" />
+            <state relative-caret-position="720">
+              <caret line="53" column="26" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/config/MybatisConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -237,30 +323,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="XML Properties File" />
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>customer</find>
-      <find>管理</find>
-      <find>sidebar-stick</find>
-      <find>row</find>
-      <find>产品</find>
-      <find>asserts</find>
-      <find>user</find>
-      <find>mana</find>
-      <find>id</find>
-      <find>manager</find>
-      <find>managermail</find>
-      <find>src</find>
-      <find>slcError creating bean with name 'serverEndpointExporte</find>
-      <find>socket</find>
-      <find>CLAIM_KEY_CREATED</find>
-      <find>responseSta</find>
       <find>setfile</find>
       <find>PARAM_ERROR</find>
       <find>no_code</find>
@@ -268,6 +338,29 @@
       <find>&lt;a</find>
       <find>4.0.4</find>
       <find>127</find>
+      <find>amount</find>
+      <find>200</find>
+      <find>fail</find>
+      <find>success</find>
+      <find>获取到的</find>
+      <find>value</find>
+      <find>user</find>
+      <find>qq</find>
+      <find>price</find>
+      <find>localhost</find>
+      <find>local</find>
+      <find>/aliPayQuery</find>
+      <find>ali</find>
+      <find>/refundQuery</find>
+      <find>good</find>
+      <find>xml</find>
+      <find>/mall/</find>
+      <find>getOrderByAccount</find>
+      <find>undi</find>
+      <find>alert</find>
+      <find>form2</find>
+      <find>/showAllTag</find>
+      <find>oodsByTag</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -283,57 +376,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/config/CsrfSecurityRequestMatcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/EmployeeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/service/EmployeeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/utils/PathUtil.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/tapd/ManagementplatformApplicationTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/FileUploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/success.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/utils/ResultUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tapd/component/LoginHandlerInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/config/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/RegisterController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/register.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/list.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/commons/bar.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/add.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/mapper/GoodsTransactionRecordingMapper.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/AlipayServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/service/AlipayService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/AlipayController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/config/AlipayConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/LogoutController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/service/UserLoginStatusService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/config/MybatisConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/AliPayServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/list.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/POJO/User.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/order/list.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/tapd/config/DruidConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/AliPayController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/RegisterController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/add.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/error/5xx.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/error/4xx.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/error/404.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/error/3xx.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/error/403.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/discuss/list.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/manager/list.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/manager/add.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/goods/list.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/error/404.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/mapper/OrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/POJO/OrderGoods.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/FileUploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tapd/mapper/UPublishGoodsMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/service/UPublishGoodsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/config/MyMvcConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UPublishGoodsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/GoodsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/service/DiscussService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/mapper/DiscussMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/mapper/EmployeeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/DiscussServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/POJO/ReceiveInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/mapper/ReceiveInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/service/ReceiveInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/ReceiveInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tapd/enums/ResponseStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/DiscussController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/DepartmentController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/ReceiveInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/LogoutController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/controlImage.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/POJO/Image.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/commons/bar.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/mapper/ImageMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/service/ImageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/ImageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/add.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/manager/add.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/ImageController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/image.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/GoodsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/config/MyMvcConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/config/AliPayConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tapd/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -356,24 +449,6 @@
           <item name="managementplatform" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="managementplatform" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="managementplatform" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-          <item name="io.jsonwebtoken:jjwt:0.9.1" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="managementplatform" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-          <item name="io.jsonwebtoken:jjwt:0.9.1" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
-          <item name="com.fasterxml.jackson.core:jackson-databind:2.10.4" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
-        </path>
       </expand>
       <select />
     </treeState>
@@ -394,7 +469,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -445,16 +519,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="tapd" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="tapd" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -475,7 +539,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="tapd" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tapd" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tapd" type="462c0819:PsiDirectoryNode" />
+              <item name="POJO" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
@@ -504,10 +588,101 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="commons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="discuss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="error" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="managementplatform2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="managementplatform2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="my-mall-img" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -520,7 +695,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/tapd/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/goods" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -530,11 +705,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/goods" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/order" />
       <recent name="$PROJECT_DIR$/src/main/java/com/tapd/utils" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/discuss" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/goods" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/manager" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates/error" />
@@ -557,7 +732,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ManagementplatformApplication">
-    <configuration name="ManagementplatformApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagementplatformApplicationTests" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="managementplatform2" />
       <extension name="coverage">
         <pattern>
@@ -632,7 +807,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ManagementplatformApplicationTests" />
         <item itemvalue="JUnit.ManagementplatformApplicationTests.test1" />
         <item itemvalue="JUnit.ManagementplatformApplicationTests.test" />
         <item itemvalue="JUnit.ManagementplatformApplicationTests.contextLoads" />
@@ -703,7 +877,17 @@
       <workItem from="1591412619445" duration="14819000" />
       <workItem from="1591439297572" duration="10314000" />
       <workItem from="1591484176686" duration="11902000" />
-      <workItem from="1591505110164" duration="3287000" />
+      <workItem from="1591505110164" duration="3946000" />
+      <workItem from="1591516624804" duration="3077000" />
+      <workItem from="1591619792052" duration="25887000" />
+      <workItem from="1591754129272" duration="500000" />
+      <workItem from="1591754922309" duration="13294000" />
+      <workItem from="1591827566594" duration="1884000" />
+      <workItem from="1591834655496" duration="17945000" />
+      <workItem from="1591917396051" duration="2370000" />
+      <workItem from="1591925279237" duration="8360000" />
+      <workItem from="1591958976589" duration="9502000" />
+      <workItem from="1592008744912" duration="426000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1591150758753</created>
@@ -754,7 +938,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591450620400</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1.0.0   管理后台上线&#10;--story=1005654  --user=iuuuuuaena">
+      <created>1591515831336</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1591515831336</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -790,7 +981,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227268000" />
+    <option name="totallyTimeSpent" value="311172000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -805,7 +996,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49868765" visible="true" weight="0.27539343" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49868765" visible="true" weight="0.28397712" />
       <window_info id="Structure" order="1" sideWeight="0.5013123" side_tool="true" weight="0.29756796" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -815,7 +1006,7 @@
       <window_info id="Web" order="7" sideWeight="0.5013123" side_tool="true" weight="0.29756796" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939634" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.32939634" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49499285" weight="0.2952756" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39895013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -823,7 +1014,7 @@
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32939634" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32939634" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5078684" side_tool="true" weight="0.32939634" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50500715" side_tool="true" weight="0.2952756" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49213162" weight="0.32545933" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32939634" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -831,7 +1022,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3297568" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.24034335" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.3297568" />
@@ -890,7 +1081,8 @@
     <MESSAGE value="0.0.3  登录注册登出&#10;--story=1003621  --user=iuuuuuaena" />
     <MESSAGE value="0.0.3  添加商品&#10;--story=1005063  --user=iuuuuuaena" />
     <MESSAGE value="0.0.5  后端文件上传&#10;--story=1005634  --user=iuuuuuaena" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.5  后端文件上传&#10;--story=1005634  --user=iuuuuuaena" />
+    <MESSAGE value="1.0.0   管理后台上线&#10;--story=1005654  --user=iuuuuuaena" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0.0   管理后台上线&#10;--story=1005654  --user=iuuuuuaena" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -900,386 +1092,439 @@
     <SUITE FILE_PATH="coverage/managementplatform2$ManagementplatformApplication.ic" NAME="ManagementplatformApplication Coverage Results" MODIFIED="1591344203049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/ManagementplatformApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/BaseService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/UserLoginStatusService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error/4xx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error/3xx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error/5xx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="55" column="42" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="55" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error/403.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/GoodsTransactionRecordingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/GoodsTransactionRecordingServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/commons/bar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="82" column="40" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/FileService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="170">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/mapper/GoodsTransactionRecordingMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/AliPayService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        <state relative-caret-position="170">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/config/MybatisConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/POJO/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="180">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/config/DruidConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+        <state relative-caret-position="163">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/EmployeeServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/POJO/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="111" column="40" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
           <folding>
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1239#1240#0" expanded="true" />
+            <element signature="e#2676#2677#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/EmployeeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manager/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/discuss/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/FileServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manager/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="88" selection-start-line="81" selection-start-column="32" selection-end-line="88" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/goods/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+        <state relative-caret-position="2142">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/mapper/UPublishGoodsMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+        <state relative-caret-position="1548">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/UPublishGoodsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/mapper/ReceiveInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2484">
-          <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/success.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2034">
-          <caret line="113" column="75" selection-start-line="113" selection-start-column="75" selection-end-line="113" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/config/MyMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="187" selection-start-line="187" selection-end-line="187" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/FileUploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+        <state relative-caret-position="342">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/EmailService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/ReceiveInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/EmailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="27" />
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/GoodsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/ReceiveInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="215" column="62" selection-start-line="215" selection-start-column="53" selection-end-line="215" selection-end-column="62" />
+        <state relative-caret-position="72">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/LogoutController.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="-372">
+          <caret line="96" column="27" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/RegisterController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="141" column="21" selection-start-line="141" selection-start-column="21" selection-end-line="141" selection-end-column="21" />
+        <state relative-caret-position="90">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding>
+            <element signature="e#2#11#0" expanded="true" />
+            <element signature="e#2#16#0" expanded="true" />
+            <element signature="e#2#16#0" expanded="true" />
+            <element signature="e#2#16#0" expanded="true" />
+            <element signature="e#2#16#0" expanded="true" />
+            <element signature="e#2#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error/4xx.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="74" column="1" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/POJO/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="105" column="36" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+        <state relative-caret-position="53">
+          <caret line="38" column="9" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="878">
-          <caret line="83" column="39" lean-forward="true" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+        <state relative-caret-position="417">
+          <caret line="77" column="36" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
+          <folding>
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="e#1871#1872#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/mapper/DiscussMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/commons/bar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="358">
+          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/mapper/EmployeeMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-599">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="476">
+          <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/DiscussService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/mapper/OrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="177" column="19" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/mapper/ImageMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/service/ImageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/ImageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manager/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="167" column="44" selection-start-line="167" selection-start-column="44" selection-end-line="167" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <caret line="93" column="53" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/DiscussServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="54" column="44" lean-forward="true" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
+        <state relative-caret-position="248">
+          <caret line="128" column="34" lean-forward="true" selection-start-line="128" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/POJO/Refund.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/POJO/ReceiveInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
           <folding>
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#1096#1097#0" expanded="true" />
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
-            <element signature="e#1241#1242#0" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/POJO/OrderGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/DiscussController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/DepartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/config/DruidConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/config/CsrfSecurityRequestMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/FileUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="151" column="25" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/image.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="108" column="42" selection-start-line="108" selection-start-column="42" selection-end-line="108" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/config/MyMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="52" column="73" selection-start-line="52" selection-start-column="73" selection-end-line="52" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4698">
+          <caret line="278" column="53" selection-start-line="278" selection-start-column="53" selection-end-line="278" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/AliPayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/config/AliPayConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/ReceiveInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/LogoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="53" column="26" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/config/MybatisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="150" column="15" lean-forward="true" selection-start-line="150" selection-start-column="15" selection-end-line="150" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/ImageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/enums/ResponseStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="76" column="21" lean-forward="true" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/DiscussController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1838">
-          <caret line="132" column="14" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UPublishGoodsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/serviceimpl/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tapd/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="40" column="8" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="162">
-            <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          </first_editor>
-          <second_editor />
+        <state relative-caret-position="466">
+          <caret line="172" column="19" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
         </state>
       </provider>
     </entry>

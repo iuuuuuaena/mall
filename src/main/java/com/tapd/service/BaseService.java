@@ -1,8 +1,5 @@
 package com.tapd.service;
 
-import com.tapd.entities.User;
-import org.omg.CORBA.INTERNAL;
-
 import java.util.List;
 
 /**

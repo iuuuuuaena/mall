@@ -1,6 +1,6 @@
 package com.tapd.controller;
 
-import com.tapd.entities.UserLoginStatus;
+import com.tapd.POJO.UserLoginStatus;
 import com.tapd.utils.CookieUtil;
 import com.tapd.utils.JwtTokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;

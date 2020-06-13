@@ -1,4 +1,3 @@
-
 # jdbc连接mysql  -- 开发
 spring:
   datasource:
@@ -23,6 +22,7 @@ spring:
 
 
 
+
 file:
   img:
     path: /my-mall-img/
@@ -30,12 +30,22 @@ file:
     path: /root/my-management-img/
   mimg:
     path: /my-management-img/
+alipay:
+  app_id: 2021001167602541
+  MERCHANT_PRIVATE_KEY: MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCJ46elgXtdVg6xUxd9vi9hSn2LM94DLm+L23bn/7Y1IvMe2eoEIidIGSLO+oaDA0Zyz3WDOe/YNk+uJTTsMLF0YEZpchoDa5vX0jwLKw7qkDMaX5zRVmgRnK6feomAHMNpwsaiGJ15v40j+PVb3rSg4o7/I9w1xD1iaTYFRdI2mDohm6sL5ZEoB9sM0oY3PUXZKcWyM56lZ86kpmidCIsaep638sMZqZw5Q5+ceS2iZUKRYwN9+bvkvb4ZTUHLJdSuztlr3hBz4367uCY5IPZ/bK2q1a8Qyp0YcBUhC8Zqwj3sfauwR0OrFcnXPZ/rJatF5S3GzSlC83afcCEZ0UYLAgMBAAECggEAFJiRiPIfOCDLjwcHQjvvHcwflnRH3BfKh4xfZWXXlHZE9D2+a6GiVm2SunHHN7h8hFeiiNhVj+kE29Eo54KabvSWb9egNRSUsZbwawaicrzZNT5E0Svj3YWWu7F06lLhiWGTg9DDbNUEwvPDylYoisNscoWrtcg7FwD6Fa2JKag4+hTw1fpqbfSIWuTz/ElGGBmwcC7i0zJ7ihjWeTcpGpDFj6FYEpYZVicYxDDjf/WT9PFKZRhrZfMTThulAwPZ2N4pAhNkrtbK9x918RpqbLkWNLnfrRtyV8wO6qIz+XuplgnNN7DKNkq8hT4Ay+ahMPd7Dq48oBAQAsLBple12QKBgQDJp2Lz1QliNM0ZIWyKukwIpHnOTr99fh2Cr9tsWpeuM0YDLe0l2UI2U5F0R1sVPYEvZ4AhYz1ZIjaDBwE9pUELQ2dHJZAAdZshtQ52QmHV5o005cNFMop0kbbPxOtnW5Kwi3PjaCg3N4m8NaUiWT330kXLqWRt9mjo+CrEzaInjwKBgQCvDPzUiFewDUcX0Sj5LjFGYBQxL/PGt+bSd0fRtYtmDOS8laLEqgbLmFPeNAtno1biKu0Fc5rEjtcDY7V1BzHwLxJ6BpaxPT5nl/N8bhgU+2z7JDXJUp94SGtsrJD3D9KoxI/Ube/EyxQZjpiEAXvSh9IDNK0wZiA32pzuo/dbxQKBgD/b5Dg3VLtm4TR+IzNjf8SU4YX15ipFj+7c5e3QWoxt7FQBbUI5JQCzQjLCjhOR4KE0c50fIkRh00V3KGtvM8PvWntrZ8jddX0dKzFEIFtuoXUI9eep87Kqmmv9flbC5xdFcjOnvmSOD+4sRtkzza33RucSA53XFK4COPkN7bX9AoGAHJELBYgGf1V7X5ijjh6Krghp4ykHKEvEoF4U21U8HXhHL7tfp6Zzm3ANZ7qojc4rFJeavIQEIsWIsyXna+SzspWL91vx5ZSwBWnXs1uoFGx/eXCMUoFoQtHWrhJvSdJMN3x0WF9kfIIDkrQhkZFIaq/9hsZm6PoRkevcJlmduV0CgYBasWUcUGIeCsSb1ZSqBvCOrE91Y7lw85sSFyXSuZ8/Ev4o+fGLM62a5yj5Wht6ZZ8FjG+X1PrkrdYQ5UA36SBhd2f87Fg3fqO4jrKjLGSUTd04kxH/kTHmiZbOS7u/ZA+AP5Fv5Ky9gO7K3QwiCVBvVezE0BuHtkNDIEyoQJTXjQ==
+  ALIPAY_PUBLIC_KEY: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqFKMcrSI9xcBeAapoCAIglxEvZl46YloXk8VpFjucj2il/3uBreuAKWssKDgAecYpvPA7h6zko0niSm8U+KK52kQrg/JeXqeA7JOV3ikJd7Lih9fM/S/wdnd/xblP6dPnLC4CVX9D422Rg5A3sInzfnR1J7R8lmIuE7fOo+Px2uNx+7WLyowKbt/WJh6+0WzR7FNkBevuZRYWM1I/JyWhR1FlDm0qm2UI9ejZNAbnd+D9iW7DgLVfz2L1Nv9o5zTiu8d3UFWTpcC+HvALobAOkRlprbGpFM2F7LeIQldfDTTa46lN+vd61MYKXZDw4SR9qFDV3/d/19m5ipTDAC1QwIDAQAB
+  notify_url: http://localhost:8080/notify
+  GATEWAYURL: https://openapi.alipaydev.com/gateway.do
 
-
-#/Users/mac/大学学习整理/java/managementplatform2/target/my-management-img/
 jwt:
   secret: my-mall
   expiration: 604800
+
+
+
+#/Users/mac/大学学习整理/java/managementplatform2/target/my-management-img/
+
+
 
 
 # 设置开发环境的配置文件
@@ -50,7 +60,7 @@ jwt:
 #mybatis:
 #  config-location: classpath:mybatis/mybatis-config.xml # 指定全局配置文件的位置
 #  mapper-locations: classpath:mybatis/mapper/*.xml # 指定sql映射文件的位置，*是包括所有的
-#  type-aliases-package: com.tapd.entities # MyBatis注解形式扫描实体类路径
+#  type-aliases-package: com.tapd.POJO # MyBatis注解形式扫描实体类路径
 
 
 

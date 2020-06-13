@@ -1,6 +1,6 @@
 package com.tapd.controller;
 
-import com.tapd.entities.Employee;
+import com.tapd.POJO.Employee;
 import com.tapd.serviceimpl.EmployeeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

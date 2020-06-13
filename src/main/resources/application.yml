@@ -1,3 +1,24 @@
+# jdbc连接mysql  -- 开发
+spring:
+  datasource:
+    username:
+    password:
+    url:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # https://blog.csdn.net/weixin_42992109/article/details/88412540
+  # 发送邮件
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username:
+    password:   # 第三放灯路的授权码
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true #一定要开启ssl,不然会503 验证失败的
+
 
 
 
@@ -9,12 +30,22 @@ file:
     path: /root/my-management-img/
   mimg:
     path: /my-management-img/
+alipay:
+  app_id:
+  MERCHANT_PRIVATE_KEY:
+  ALIPAY_PUBLIC_KEY:
+  notify_url:
+  GATEWAYURL:
 
-
-#/Users/mac/大学学习整理/java/managementplatform2/target/my-management-img/
 jwt:
   secret: my-mall
   expiration: 604800
+
+
+
+#/Users/mac/大学学习整理/java/managementplatform2/target/my-management-img/
+
+
 
 
 # 设置开发环境的配置文件
@@ -29,7 +60,7 @@ jwt:
 #mybatis:
 #  config-location: classpath:mybatis/mybatis-config.xml # 指定全局配置文件的位置
 #  mapper-locations: classpath:mybatis/mapper/*.xml # 指定sql映射文件的位置，*是包括所有的
-#  type-aliases-package: com.tapd.entities # MyBatis注解形式扫描实体类路径
+#  type-aliases-package: com.tapd.POJO # MyBatis注解形式扫描实体类路径
 
 
 

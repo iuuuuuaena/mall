@@ -1,6 +1,6 @@
 package com.tapd.serviceimpl;
 
-import com.tapd.entities.Discuss;
+import com.tapd.POJO.Discuss;
 import com.tapd.mapper.DiscussMapper;
 import com.tapd.service.DiscussService;
 import org.springframework.beans.factory.annotation.Autowired;

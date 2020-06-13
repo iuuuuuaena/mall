@@ -7,7 +7,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Dashboard Template for Bootstrap</title>
+		<title>迷糊商城管理后台</title>
 		<!-- Bootstrap core CSS -->
 		<link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.css}"rel="stylesheet">
 
@@ -39,6 +39,7 @@
 				animation: chartjs-render-animation 0.001s;
 			}
 		</style>
+
 	</head>
 
 	<body>
@@ -69,7 +70,7 @@
 						</div>
 					</div>
 					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-						<h1 class="h2">Dashboard</h1>
+						<h1 class="h2">最近订单数</h1>
 						<div class="btn-toolbar mb-2 mb-md-0">
 							<div class="btn-group mr-2">
 								<button class="btn btn-sm btn-outline-secondary">Share</button>
@@ -102,16 +103,30 @@
 			feather.replace()
 		</script>
 
+
 		<!-- Graphs -->
 		<script type="text/javascript" src="asserts/js/Chart.min.js" th:src="@{/asserts/js/Chart.min.js}"  ></script>
-		<script>
+		<script  th:inline="javascript">
 			var ctx = document.getElementById("myChart");
+			var myDate = new Date();
+
+
+			var y = myDate.getFullYear()+"-"
+			var data = myDate.getMonth() + 1
+			var day =  myDate.getDate()
+			if(myDate.getDate() < 10){
+				data = "0"+day
+			}
+			// alert(y+data+"-"+day + [[${orders}]])
+
+
+
 			var myChart = new Chart(ctx, {
 				type: 'line',
 				data: {
-					labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+					labels: ["2020-06-07", "2020-06-08", "2020-06-09", "2020-06-10", "2020-06-11", "2020-06-12", "2020-06-13"],
 					datasets: [{
-						data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+						data: [1, 2, 0, 15, 13, 3, 2],
 						lineTension: 0,
 						backgroundColor: 'transparent',
 						borderColor: '#007bff',

@@ -1,12 +1,11 @@
 package com.tapd.controller;
 
-import com.tapd.entities.Employee;
-import com.tapd.entities.User;
+import com.tapd.POJO.Employee;
+import com.tapd.POJO.User;
 import com.tapd.enums.ResponseStatus;
 import com.tapd.service.EmailService;
 import com.tapd.service.EmployeeService;
 import com.tapd.service.UserService;
-import com.tapd.serviceimpl.UserServiceImpl;
 import com.tapd.utils.CodeUtil;
 import com.tapd.utils.ResultUtils;
 import org.slf4j.Logger;
@@ -105,14 +104,17 @@ public class RegisterController {
         // 如果验证码为空 或者 验证码不是ok
         if (code == null || !code.equals("ok")) {
             System.out.println("code为" + code);
-            return ResultUtils.fail(ResponseStatus.NO_CODE);
+            // 7000
+            return ResultUtils.fail(ResponseStatus.NO_CODE.getCode(),ResponseStatus.NO_CODE.getMsg(),ResponseStatus.NO_CODE);
         }
         // 注册失败
         if (userService.create(user) != 1) {
-            return ResultUtils.error(ResponseStatus.REGISTER_ERROR);
+            // 1008
+            return ResultUtils.error(ResponseStatus.REGISTER_ERROR.getCode(),ResponseStatus.REGISTER_ERROR.getMsg(),ResponseStatus.REGISTER_ERROR);
         }
         // 注册成功
-        return ResultUtils.ok(ResponseStatus.REGISTER_SUCCESS);
+        // 1009
+        return ResultUtils.ok(ResponseStatus.REGISTER_SUCCESS.getCode(),ResponseStatus.REGISTER_SUCCESS.getMsg(),ResponseStatus.REGISTER_SUCCESS);
     }
 
 
@@ -130,11 +132,13 @@ public class RegisterController {
         // 如果验证码为空，返回参数错误
         System.out.println("email是" + email);
         if (email == null) {
-            return ResultUtils.fail(ResponseStatus.PARAM_ERROR);
+            // 400
+            return ResultUtils.fail(ResponseStatus.PARAM_ERROR.getCode(),ResponseStatus.PARAM_ERROR.getMsg(),ResponseStatus.PARAM_ERROR);
         }
         // 如果邮箱存在，返回邮箱已注册
         if (userService.isUserExist(email)) {
-            return ResultUtils.fail(ResponseStatus.USER_EMAIL_EXIST);
+            // 1003
+            return ResultUtils.fail(ResponseStatus.USER_EMAIL_EXIST.getCode(),ResponseStatus.USER_EMAIL_EXIST.getMsg(),ResponseStatus.USER_EMAIL_EXIST);
         }
         // 随机新建一个验证码
         String code = CodeUtil.randomCode();
@@ -144,7 +148,8 @@ public class RegisterController {
         session.setAttribute("code", code);
         logger.info("code:为" + code);
         //  返回验证码创建成功
-        return ResultUtils.ok(ResponseStatus.CODE_GET_SUCCESS);
+        // 7002
+        return ResultUtils.ok(ResponseStatus.CODE_GET_SUCCESS.getCode(),ResponseStatus.CODE_GET_SUCCESS.getMsg(),ResponseStatus.CODE_GET_SUCCESS);
     }
 
 
@@ -167,7 +172,7 @@ public class RegisterController {
         if (code == null) {
             logger.error("验证码传入错误");
             System.out.println("验证码错误");
-            return ResultUtils.fail(ResponseStatus.PARAM_ERROR);
+            return ResultUtils.fail(ResponseStatus.PARAM_ERROR.getCode(),ResponseStatus.PARAM_ERROR.getMsg(),ResponseStatus.PARAM_ERROR);
         }
         // 从session中获取验证码，
         String rel_code = (String) session.getAttribute("code");
@@ -175,17 +180,17 @@ public class RegisterController {
         // 如果没有code，就是还没发送验证码
         if (rel_code == null) {
             logger.error("还没发送验证码，就检查验证码？");
-            return ResultUtils.fail(ResponseStatus.NO_CODE);
+            return ResultUtils.fail(ResponseStatus.NO_CODE.getCode(),ResponseStatus.NO_CODE.getMsg(),ResponseStatus.NO_CODE);
         }
         // 如果验证码不正确，返回验证码不匹配
         if (!code.equals(rel_code)) {
             System.out.println("验证码不匹配");
             logger.error("验证码不匹配");
-            return ResultUtils.fail(ResponseStatus.VEL_CODE_ERROR);
+            return ResultUtils.fail(ResponseStatus.VEL_CODE_ERROR.getCode(),ResponseStatus.VEL_CODE_ERROR.getMsg(),ResponseStatus.VEL_CODE_ERROR);
         }
         // 在session中把验证码设置为   OK ,表示，验证码验证成功，接下来应该去登录了！！！！
         session.setAttribute("code", "ok");
-        return ResultUtils.ok(ResponseStatus.CODE_CHECK_SUCCESS);
+        return ResultUtils.ok(ResponseStatus.CODE_CHECK_SUCCESS.getCode(),ResponseStatus.CODE_CHECK_SUCCESS.getMsg(),ResponseStatus.CODE_CHECK_SUCCESS);
     }
 
 

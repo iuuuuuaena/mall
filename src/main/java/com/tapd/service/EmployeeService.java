@@ -1,7 +1,7 @@
 package com.tapd.service;
 
 
-import com.tapd.entities.Employee;
+import com.tapd.POJO.Employee;
 
 /**
  * @Author jxd

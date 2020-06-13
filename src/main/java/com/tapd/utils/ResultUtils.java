@@ -15,7 +15,7 @@ public class ResultUtils<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private int code = ResponseStatus.OK.getCode();
+    private int code ;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -28,10 +28,16 @@ public class ResultUtils<T> implements Serializable {
         this.data = data;
     }
 
+
+    public ResultUtils(int code, String msg, T data) {
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
+    }
     /**
      * 响应消息
      */
-    private String msg = ResponseStatus.OK.getMsg();
+    private String msg ;
     /**
      * 响应中的数据
      */
@@ -45,24 +51,31 @@ public class ResultUtils<T> implements Serializable {
         return new ResultUtils();
     }
 
+
     /**
      * 业务处理成功，有数据返回
      */
     public static <T> ResultUtils ok(T data) {
         return new ResultUtils(data);
     }
+    public static <T> ResultUtils ok(int code, String msg,T data) {
+        return new ResultUtils(code, msg, data);
+    }
 
     /**
      * 业务处理失败
      */
-    public static ResultUtils fail(ResponseStatus ResponseStatus) {
-        return new ResultUtils(ResponseStatus);
+    public static ResultUtils fail(ResponseStatus responseStatus) {
+        return new ResultUtils(responseStatus);
     }
 
     public static ResultUtils fail(int code, String msg) {
         return new ResultUtils(code, msg, null);
     }
 
+    public static <T> ResultUtils fail(int code, String msg,T data) {
+        return new ResultUtils(code, msg, data);
+    }
 
     /**
      * 系统错误
@@ -74,9 +87,18 @@ public class ResultUtils<T> implements Serializable {
     public static ResultUtils error(int code, String msg) {
         return new ResultUtils(code, msg, null);
     }
+    public static <T> ResultUtils error(int code, String msg,T data) {
+        return new ResultUtils(code, msg, data);
+    }
 
-    public static ResultUtils error(ResponseStatus ResponseStatus) {
-        return new ResultUtils(ResponseStatus);
+    // public static ResultUtils error(ResponseStatus ResponseStatus) {
+    //     return new ResultUtils(ResponseStatus);
+
+
+    // }
+
+    public static <T> ResultUtils error(T data) {
+        return new ResultUtils(data);
     }
 
 
@@ -113,11 +135,6 @@ public class ResultUtils<T> implements Serializable {
                 '}';
     }
 
-    public ResultUtils(int code, String msg, T data) {
-        this.code = code;
-        this.msg = msg;
-        this.data = data;
-    }
 }
 
 

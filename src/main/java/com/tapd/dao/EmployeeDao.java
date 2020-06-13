@@ -1,12 +1,5 @@
 package com.tapd.dao;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-
-import com.tapd.entities.Department;
-import com.tapd.entities.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 

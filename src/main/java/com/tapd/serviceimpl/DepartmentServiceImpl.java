@@ -1,6 +1,6 @@
 package com.tapd.serviceimpl;
 
-import com.tapd.entities.Department;
+import com.tapd.POJO.Department;
 import com.tapd.mapper.DepartmentMapper;
 import com.tapd.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;

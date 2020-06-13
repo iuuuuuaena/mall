@@ -1,9 +1,5 @@
 package com.tapd.dao;
 
-import com.tapd.entities.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-
 /**
  * @Author jxd
  * @Date 2020-05-31  18:24
